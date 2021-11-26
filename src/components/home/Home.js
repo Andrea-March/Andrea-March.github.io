@@ -1,15 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import coffeeflavors from '../../static/coffee-flavors.jpg'
 import whoweare from '../../static/background.jpg'
+
 const Home = () =>{
     let navigate = useNavigate();
-    const navigateProducts = () => {
-        document.getElementById('link-to-page').className += ' slide'
-        setTimeout(()=>{
-            navigate('/products');
-        },1500)
-
+    const goToArticles = () => {
+        navigate('/articles');
     }
     return (
         <div className="home dFlex">
@@ -24,15 +21,15 @@ const Home = () =>{
                 </div>
                 <div className="gallery-element pr-10 ">
                     <p>Discover the warm taste of a single origin coffee, with intense flavors and aromas</p>
-                    <img src={coffeeflavors} />
+                    <img src={coffeeflavors} onClick={goToArticles}/>
                 </div>
                 <div className="gallery-element pl-10 ">
-                    <img src={coffeeflavors} />
+                    <img src={coffeeflavors} onClick={goToArticles}/>
                     <p>Discover the warm taste of a single origin coffee, with intense flavors and aromas</p>
                 </div>
                 <div className="gallery-element ">
                     <p>Discover the warm taste of a single origin coffee, with intense flavors and aromas</p>
-                    <img src={coffeeflavors} />
+                    <img src={coffeeflavors} onClick={goToArticles}/>
                 </div>
 
             </div>

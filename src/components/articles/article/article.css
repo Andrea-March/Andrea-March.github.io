@@ -1,0 +1,44 @@
+.article-card{
+    z-index: 3;
+    opacity: 1;
+}
+
+.article-card img{
+   /*width: 50%;*/
+    width: 400px;
+}
+
+.flex-column {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
+
+.card-title{
+    color: white;
+    font-size: 2em;
+    padding-bottom: 3%;
+}
+
+.card-data{
+    padding: 3%;
+    background-color: grey;
+    width: 376px;
+}
+
+.right {
+    width: 25%;
+    opacity: 0.5;
+    transition: all 1s ease-in-out;
+}
+.left {
+    width: 200px;
+    opacity: 0.5;
+}
+
+
+/*.right:hover img{
+    transform: scale(1.74) translate(-172%,2%);
+    opacity: 1;
+}*/
