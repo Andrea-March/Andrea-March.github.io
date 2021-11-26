@@ -1,0 +1,32 @@
+.product-types {
+    position: relative;
+    /*background-image: url("./static/background.jpg");*/
+    background-color: grey;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 83vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-single-type {
+    width: 25%;
+    height: 100%;
+    background-color: grey;
+    justify-content: center;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+
+.product-single-type:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.link {
+    text-decoration: inherit;
+    color: white;
+    text-align: center;
+}

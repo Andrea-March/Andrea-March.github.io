@@ -1,0 +1,16 @@
+.product-card{
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    margin: 10px;
+    padding: 3px;
+    width: 350px;
+    height: 300px;
+}
+
+.product-card:hover {
+    cursor: pointer;
+    width: 360px;
+    height: 310px;
+}
