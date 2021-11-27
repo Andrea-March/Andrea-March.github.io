@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0eb739c2.chunk.css",
+    "main.js": "/static/js/main.cfe11433.chunk.js",
+    "main.js.map": "/static/js/main.cfe11433.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2b9e7b33.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2b9e7b33.js.map",
+    "static/js/2.5fecf526.chunk.js": "/static/js/2.5fecf526.chunk.js",
+    "static/js/2.5fecf526.chunk.js.map": "/static/js/2.5fecf526.chunk.js.map",
+    "static/js/3.7807c50e.chunk.js": "/static/js/3.7807c50e.chunk.js",
+    "static/js/3.7807c50e.chunk.js.map": "/static/js/3.7807c50e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.0eb739c2.chunk.css.map": "/static/css/main.0eb739c2.chunk.css.map",
+    "static/js/2.5fecf526.chunk.js.LICENSE.txt": "/static/js/2.5fecf526.chunk.js.LICENSE.txt",
+    "static/media/background.544f402a.jpg": "/static/media/background.544f402a.jpg",
+    "static/media/articles.css": "/static/media/french.a2a8e28f.jpg",
+    "static/media/coffee-cup-ok2.109fe062.jpg": "/static/media/coffee-cup-ok2.109fe062.jpg",
+    "static/media/coffee-flavors2.6f7fb849.jpg": "/static/media/coffee-flavors2.6f7fb849.jpg",
+    "static/media/coffee2.250f656b.png": "/static/media/coffee2.250f656b.png",
+    "static/media/espresso-ok2.e091d8f3.jpg": "/static/media/espresso-ok2.e091d8f3.jpg",
+    "static/media/powder.daf92882.png": "/static/media/powder.daf92882.png",
+    "static/media/v60-2.f2f676dd.png": "/static/media/v60-2.f2f676dd.png",
+    "static/media/v60-ok2.45b20274.jpg": "/static/media/v60-ok2.45b20274.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2b9e7b33.js",
+    "static/js/2.5fecf526.chunk.js",
+    "static/css/main.0eb739c2.chunk.css",
+    "static/js/main.cfe11433.chunk.js"
+  ]
+}
