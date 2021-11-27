@@ -1,11 +1,11 @@
 .article-card{
+    width: 25%;
     z-index: 3;
     opacity: 1;
 }
 
 .article-card img{
-   /*width: 50%;*/
-    width: 400px;
+    width: 80%
 }
 
 .flex-column {
@@ -24,18 +24,10 @@
 .card-data{
     padding: 3%;
     background-color: grey;
-    width: 376px;
+    width: 74%;
 }
 
-.right {
-    width: 25%;
-    opacity: 0.5;
-    transition: all 1s ease-in-out;
-}
-.left {
-    width: 200px;
-    opacity: 0.5;
-}
+
 
 
 /*.right:hover img{

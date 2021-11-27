@@ -46,3 +46,13 @@
     color: white;
     cursor: pointer;
 }
+
+@media screen and (max-width: 960px) {
+
+    .social {
+        margin: 0;
+    }
+    .footer p{
+        width: 100%;
+    }
+}

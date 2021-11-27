@@ -1,7 +1,10 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import coffeeflavors from '../../static/coffee-flavors.jpg'
+import coffeeflavors from '../../static/coffee-flavors2.jpg'
+import coffeecup from '../../static/coffee-cup-ok2.jpg'
+import espresso from '../../static/espresso-ok2.jpg'
 import whoweare from '../../static/background.jpg'
+import './home.css'
 
 const Home = () =>{
     let navigate = useNavigate();
@@ -20,16 +23,16 @@ const Home = () =>{
                     <p>Find out all about coffee</p>
                 </div>
                 <div className="gallery-element pr-10 ">
-                    <p>Discover the warm taste of a single origin coffee, with intense flavors and aromas</p>
+                    <p>Discover the warm taste of a single origin coffee, and let yourself be lulled by its fresh and intense flavors and aromas</p>
                     <img src={coffeeflavors} onClick={goToArticles}/>
                 </div>
-                <div className="gallery-element pl-10 ">
-                    <img src={coffeeflavors} onClick={goToArticles}/>
+                <div className="gallery-element pl-10 right-description">
                     <p>Discover the warm taste of a single origin coffee, with intense flavors and aromas</p>
+                    <img src={coffeecup} onClick={goToArticles}/>
                 </div>
-                <div className="gallery-element ">
-                    <p>Discover the warm taste of a single origin coffee, with intense flavors and aromas</p>
-                    <img src={coffeeflavors} onClick={goToArticles}/>
+                <div className="gallery-element">
+                    <p>Discover the best coffee extraction methods, to fully enjoy your cup and appreciate all the nuances of your coffee</p>
+                    <img src={espresso} onClick={goToArticles}/>
                 </div>
 
             </div>
@@ -37,7 +40,7 @@ const Home = () =>{
                 <div className="whoarewe dFlex">
                     <p>Who We Are</p>
                 </div>
-                <div className="flex-row whoarewe-row">
+                <div className="whoarewe-row">
                     <img src={whoweare}/>
                     <p>We are a group of friends sharing the passion for coffee! We'd like to share our passion with everybody, and we have this blog to talk about our favorite beverage!</p>
                 </div>

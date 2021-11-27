@@ -1,6 +1,6 @@
 import React from "react";
 import './productsHome.css'
-import machines from "../../static/v60-2.png";
+import machines from "../../static/v60/v60-2.png";
 import coffees from "../../static/powder.png";
 import {Link} from "react-router-dom";
 

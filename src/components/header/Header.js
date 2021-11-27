@@ -12,7 +12,6 @@ const Header = () =>{
         setClick(false);
     };
     return(
-        <>
         <div className="navbar">
             <div className="navbar-container">
                 <nav className="navbar">
@@ -33,7 +32,8 @@ const Header = () =>{
                                 Articles
                             </Link>
                         </li>
-                        <li className="nav-item"> <Link to="/products" className="nav-links" onClick={closeMobileMenu}>
+                        <li className="nav-item">
+                            <Link to="/products" className="nav-links" onClick={closeMobileMenu}>
                             Products
                         </Link></li>
                         <li className="nav-item">
@@ -46,7 +46,6 @@ const Header = () =>{
                 </nav>
             </div>
         </div>
-        </>
     )
 }
 

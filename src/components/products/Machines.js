@@ -1,6 +1,6 @@
 import React from "react";
-//import v60 from "../../static/v60.png";
-import v602 from "../../static/v60-2.png";
+//import v60 from "../../static/v60/v60.png";
+import v602 from "../../static/v60/v60-2.png";
 //import aero from "../../static/aeropress.png";
 //import pot from "../../static/pot.png";
 

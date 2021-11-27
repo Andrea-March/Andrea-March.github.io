@@ -90,43 +90,43 @@
     .logo-img{
         width: 40px;
     }
-    .NavbarItems {
-        position: relative;
-    }
     .logo-name {
         padding-top: 0;
         font-size: 16px;
     }
-    .navbar-logo {
-        position: relative;
-        top: 10px;
-        left: -190px;
+    .navbar-logo{
+        padding-right: 20px;
     }
     .nav-menu {
         display: flex;
         flex-direction: column;
-        width: 500px;
-        height: 85vh;
-        position: absolute;
-        top: 80px;
-        left: -1000px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        margin-top: 50%;
+        background: #242222;
+        position: fixed;
         opacity: 1;
         transition: all 0.5s ease;
+        transform: translate3d(115vw, 25vh,0);
     }
 
     .nav-menu.active {
-        background: #242222;
-        left: -350px;
-        opacity: 1;
-        transition: all 0.5s ease;
+        position: absolute;
+        transform: translate3d(0, 25vh, 0);
         z-index: 3;
     }
-
+    .nav-item {
+        width: 50%;
+        margin: 0;
+        padding: 0;
+    }
     .nav-links {
         text-align: center;
-        padding: 2rem;
-        width: 50%;
-        display: table;
+        padding: 2.5rem;
+        width: 70%;
+        height: 8%;
     }
 
     .nav-links:hover {
@@ -138,9 +138,12 @@
     .menu-icon {
         display: flex;
         position: relative;
-        margin-left: 100px;
+        margin: 0;
         font-size: 1.8rem;
         cursor: pointer;
+        padding-left: 100%;
+        z-index: 4;
+        width: 20px;
     }
 
     .fa-times {
