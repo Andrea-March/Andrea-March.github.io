@@ -30,3 +30,19 @@
     color: white;
     text-align: center;
 }
+
+@media all and (max-width: 750px){
+    .product-types {
+        flex-direction: column;
+    }
+
+    .product-single-type{
+        width: 50%;
+        margin-top: 5%;
+
+
+    }
+    .product-single-type img{
+        width: 75%;
+    }
+}
