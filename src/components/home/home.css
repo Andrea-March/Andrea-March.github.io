@@ -30,6 +30,7 @@
     height: 200px;
     color: white;
     font-size: 3em;
+    text-align: center;
 }
 
 .gallery {
@@ -113,17 +114,23 @@
 
 
 @media screen and (max-width: 960px) {
+    .cover {
+        height: 350px;
+    }
+    .logo-write {
+        height: 150px;
+    }
     .gallery-element{
         flex-direction: column;
         justify-content: center;
     }
     .gallery-element p{
-      align-self: center;
+        align-self: center;
         width: 80%;
         padding: 1%;
     }
     .gallery-element img{
-        width: 80%;
+        width: 70%;
     }
     .whoarewe-row img{
         width: 50%;
