@@ -23,7 +23,10 @@ const ProductsHome = () =>{
             {
                 productTypes.map((type) =>{
                     return(
-                        <div className="product-single-type"><Link className="link" to={`/products/${type.name.toLowerCase()}`}><img src={type.thumb}></img><p>{type.name}</p></Link></div>
+                        <div className="product-single-type">
+                            <Link className="link" to={`/products/${type.name.toLowerCase()}`}>
+                            <img src={type.thumb} alt=""/>
+                            <p>{type.name}</p></Link></div>
                     )
                 })
             }

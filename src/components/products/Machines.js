@@ -76,7 +76,7 @@ const Machines= () =>{
         return(
             <div className="card dFlex" key={item.id}>
                 <div className="card-image">
-                    <img src={item.thumb} />
+                    <img src={item.thumb} alt=""/>
                 </div>
                 <div className="card-header dFlex">
                     <h2 className="h2">{item.name}</h2>

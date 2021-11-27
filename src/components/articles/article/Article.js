@@ -5,7 +5,7 @@ const Article = ({article, position}) => {
 
     return(
         <div className={`article-card flex-column ${position}`}>
-            <img src={article.thumb}/>
+            <img src={article.thumb} alt=""/>
             <div className="card-data flex-column">
                 <div className="card-title">{article.title}</div>
                 <div className="card-date">{article.date}</div>

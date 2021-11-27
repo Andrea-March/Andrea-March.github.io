@@ -1,7 +1,7 @@
 import React from "react";
-import ProductCard from "./ProductCard";
 import powder from '../../static/powder.png'
 import '../../App.css'
+
 const Products = () =>{
     let productsList = [
         {
@@ -82,7 +82,7 @@ const Products = () =>{
         return(
             <div className="card dFlex" key={item.id}>
                 <div className="card-image">
-                    <img src={item.thumb} />
+                    <img src={item.thumb} alt=""/>
                 </div>
                 <div className="card-header dFlex">
                     <h2 className="h2">{item.name}</h2>

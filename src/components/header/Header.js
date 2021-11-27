@@ -16,7 +16,7 @@ const Header = () =>{
             <div className="navbar-container">
                 <nav className="navbar">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        <img className="logo-img" src={logo} /><p className="logo-name">For Coffee Lovers.</p>
+                        <img className="logo-img" src={logo} alt=""/><p className="logo-name">For Coffee Lovers.</p>
                     </Link>
                     <div className="menu-icon" onClick={handleClick}>
                         <i className={click ? "fa fa-times" : "fa fa-bars"} />
