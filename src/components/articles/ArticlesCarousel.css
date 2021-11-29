@@ -1,0 +1,15 @@
+.cover-articles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 700px;
+
+    background-image: url("../../static/cover-opacity.png");
+    background-size: cover;
+    background-color: grey;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import powder from '../../static/powder.png'
 import '../../App.css'
+import './powders.css'
 
-const Products = () =>{
+const Powders = () =>{
     let productsList = [
         {
             'id': 1,
@@ -102,4 +103,4 @@ const Products = () =>{
 }
 
 
-export default Products;
+export default Powders;

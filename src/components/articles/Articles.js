@@ -1,12 +1,23 @@
 import React, {useState} from "react";
-import Article from "./article/Article";
+import ArticleCard from "./article-card/ArticleCard";
 import v60 from '../../static/v60/v60-ok2.jpg'
 import french from '../../static/french.jpg'
 import cappuccino from '../../static/cappuccino.jpg'
 import './articles.css'
+import {generatePath, useNavigate} from "react-router-dom";
 
 const Articles = () => {
+
+    const navigate = useNavigate
+
     const [currentIndex, setIndex] = useState(0)
+
+    const [id, setId] = useState()
+
+    const handleProceed = (articleId) => {
+        setId(articleId)
+        id && navigate(generatePath("/articles/:id", { id }));
+    };
 
     let articleList = [
         {
@@ -38,12 +49,12 @@ const Articles = () => {
     }
     return(
         <div className="flex-column">
-            <div className="cover-articles">
-                    <Article article={articleList[getPrevious(currentIndex)]} position={"left"}/>
+            <div className="cover-articles" onClick={()=>handleProceed(0)}>
+                <ArticleCard article={articleList[getPrevious(currentIndex)]} position={"left"} />
                 <i className="fa fa-arrow-left fa-2x" onClick={slideLeft}/>
-                    <Article article={articleList[currentIndex]} position={"center"}/>
+                <ArticleCard article={articleList[currentIndex]} position={"center"}/>
                 <i className="fa fa-arrow-right fa-2x" onClick={slideRight}/>
-                <Article article={articleList[getNext(currentIndex)]} position={"right"}/>
+                <ArticleCard article={articleList[getNext(currentIndex)]} position={"right"}/>
             </div>
             <div className="shortcut-images">
                 <div className="powders shortcut">

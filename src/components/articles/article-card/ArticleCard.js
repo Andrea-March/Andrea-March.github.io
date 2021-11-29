@@ -1,7 +1,7 @@
 import React from "react";
-import './article.css'
+import './ArticleCard.css'
 
-const Article = ({article, position}) => {
+const ArticleCard = ({article, position}) => {
 
     return(
         <div className={`article-card flex-column ${position}`}>
@@ -16,4 +16,4 @@ const Article = ({article, position}) => {
 }
 
 
-export default Article;
+export default ArticleCard;
