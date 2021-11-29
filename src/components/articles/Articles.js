@@ -4,31 +4,33 @@ import v60 from '../../static/v60/v60-ok2.jpg'
 import french from '../../static/french.jpg'
 import cappuccino from '../../static/cappuccino.jpg'
 import './articles.css'
-import {generatePath, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const Articles = () => {
 
-    const navigate = useNavigate
+    const navigate = useNavigate()
 
     const [currentIndex, setIndex] = useState(0)
 
-    const [id, setId] = useState()
 
     const handleProceed = (articleId) => {
-        setId(articleId)
-        id && navigate(generatePath("/articles/:id", { id }));
+        console.log(articleId)
+        articleId && navigate(`/articles/${articleId}`);
     };
 
     let articleList = [
         {
+            id: 1,
             title: 'The Art of V60',
             date: '2021.11.26',
             thumb: v60
         },{
+            id: 2,
             title: 'The Perfect Frech Press',
             date: '2021.11.26',
             thumb: french
         },{
+            id: 3,
             title: 'How to make latte at home',
             date: '2021.11.26',
             thumb: cappuccino
@@ -49,12 +51,12 @@ const Articles = () => {
     }
     return(
         <div className="flex-column">
-            <div className="cover-articles" onClick={()=>handleProceed(0)}>
-                <ArticleCard article={articleList[getPrevious(currentIndex)]} position={"left"} />
+            <div className="cover-articles">
+                <ArticleCard article={articleList[getPrevious(currentIndex)]} position={"left"} onClick={()=>{}}/>
                 <i className="fa fa-arrow-left fa-2x" onClick={slideLeft}/>
-                <ArticleCard article={articleList[currentIndex]} position={"center"}/>
+                <ArticleCard article={articleList[currentIndex]} position={"center"} onClick={handleProceed}/>
                 <i className="fa fa-arrow-right fa-2x" onClick={slideRight}/>
-                <ArticleCard article={articleList[getNext(currentIndex)]} position={"right"}/>
+                <ArticleCard article={articleList[getNext(currentIndex)]} position={"right"} onClick={()=>{}}/>
             </div>
             <div className="shortcut-images">
                 <div className="powders shortcut">

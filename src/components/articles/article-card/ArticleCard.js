@@ -1,10 +1,10 @@
 import React from "react";
 import './ArticleCard.css'
 
-const ArticleCard = ({article, position}) => {
+const ArticleCard = ({article, position, onClick}) => {
 
     return(
-        <div className={`article-card flex-column ${position}`}>
+        <div className={`article-card flex-column ${position}`} onClick={() => onClick(article.id)}>
             <img src={article.thumb} alt=""/>
             <div className="card-data flex-column">
                 <div className="card-title">{article.title}</div>
