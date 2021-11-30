@@ -1,17 +1,16 @@
-import React, {useEffect} from "react";
-import {useParams} from "react-router-dom";
+import React from "react";
 import './articlePage.css'
 import placeholder from '../../../static/coffee-cup-ok2.jpg'
 
 
 const ArticlePage = () => {
 
-    const { id } = useParams();
+    //const { id } = useParams();
 
-    useEffect(()=>{
+    //useEffect(()=>{
         //CALL HERE BACKEND TO GET ARTICLE
-        console.log(id)
-    },[])
+        //console.log(id)
+    //},[])
 
     return (
         <div className="article-container">
@@ -54,7 +53,7 @@ const ArticlePage = () => {
                 <img src={placeholder} alt=""/>
                 <p>Our coffee should be ready at this point, and we will be able to taste and appreciate all its hidden aromas and flavors!</p>
                 <img src={placeholder} alt=""/>
-                <p>If the extraction took longer than the time we have indicated, we recommend trying and coaring the grinding next time.
+                <p>If the extraction took longer than the time we have indicated, we recommend trying and coarsening the grinding next time.
                     If instead it took shorter, try finer!</p>
 
 
