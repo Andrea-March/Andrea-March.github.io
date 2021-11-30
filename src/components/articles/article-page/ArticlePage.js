@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect} from "react";
 import {useParams} from "react-router-dom";
 import './articlePage.css'
 import placeholder from '../../../static/coffee-cup-ok2.jpg'
@@ -7,8 +7,6 @@ import placeholder from '../../../static/coffee-cup-ok2.jpg'
 const ArticlePage = () => {
 
     const { id } = useParams();
-
-    const eventListeners = useRef();
 
     useEffect(()=>{
         //CALL HERE BACKEND TO GET ARTICLE
