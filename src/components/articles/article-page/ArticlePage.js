@@ -46,7 +46,7 @@ const ArticlePage = () => {
                 </p>
                 <img src={placeholder} alt=""/>
                 <p>
-                    At this point, pour 50 g (<a>what if I do not have a scale?</a>) of water in concentric circles in the center of the ground coffee (without pouring on the edges of the ground coffee!) and wait 30 seconds. This time should be enough to filter almost all of the water we just poured out. We proceed to pour 100g of water (at most until it reaches half a centimeter below the limit of the ground) again with concentric movements and taking care not to pour on the edges of the ground.
+                    At this point, pour 50 g (what if I do not have a scale?) of water in concentric circles in the center of the ground coffee (without pouring on the edges of the ground coffee!) and wait 30 seconds. This time should be enough to filter almost all of the water we just poured out. We proceed to pour 100g of water (at most until it reaches half a centimeter below the limit of the ground) again with concentric movements and taking care not to pour on the edges of the ground.
                     Now let's wait 60 seconds, which should be enough to drain the water we poured out.
                     At the end of this time, pour the remaining 50g of water with the same movements, which should take another 30 seconds to filter completely.
                 </p>
