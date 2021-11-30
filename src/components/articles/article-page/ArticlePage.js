@@ -16,6 +16,13 @@ const ArticlePage = () => {
         <div className="article-container">
             <div className="inner-article-container">
                 <h1>The Art Of V60</h1>
+                <div className="abstract">
+                    <p className="abstract-title">What you'll need</p>
+                    <ol className="abstract-body">
+                        <li> Time: 3 minutes</li>
+                        <li> Ground: 15 g per mug</li>
+                    </ol>
+                </div>
                 <p>
                     Have you ever wondered how you get a great v60?
                     Today we will discover together some of the details that will make your coffee tasty,

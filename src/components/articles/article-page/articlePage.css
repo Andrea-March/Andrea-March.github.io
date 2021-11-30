@@ -18,7 +18,7 @@
 
 .inner-article-container p{
     text-align: center;
-    width: 90%;
+    width: 100%;
     font-size: 1.5em;
 }
 
@@ -28,17 +28,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+.abstract {
+    max-width: 25%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.abstract-title {
+    text-underline: grey;
+    font-size: 2rem;
+    color: darkslategrey;
+
+}
+
+.abstract-body {
+    list-style-type: disc;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 100%;
 }
 
 
 @media all and (max-width: 700px){
+    .abstract {
+        max-width: 90%;
+        width: 90%;
+    }
     .inner-article-container{
         width: 100%;
         margin: 0;
     }
     .inner-article-container p{
-        width: 75%;
+        width: 90%;
         margin: 0;
     }
 }

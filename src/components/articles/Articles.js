@@ -13,7 +13,7 @@ const Articles = () => {
                     Powders
                 </div>
                 <div className="machines shortcut">
-                    Machines
+                    Guides To Brewing
                 </div>
                 <div className="curiosities shortcut">
                     Curiosities

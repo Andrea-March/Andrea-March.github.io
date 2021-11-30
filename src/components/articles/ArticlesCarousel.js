@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import ArticleCard from "./article-card/ArticleCard";
 import {useNavigate} from "react-router-dom";
 import v60 from "../../static/v60/v60-ok2.jpg";
-import french from "../../static/french.jpg";
-import cappuccino from "../../static/cappuccino.jpg";
+import french from "../../static/french/french_press_ok.jpg";
+import cappuccino from "../../static/cappuccino/cappuccino_ok.jpg";
 import './ArticlesCarousel.css'
 
 const ArticlesCarousel = () => {
@@ -22,7 +22,7 @@ const ArticlesCarousel = () => {
             thumb: french
         },{
             id: 3,
-            title: 'How to make latte at home',
+            title: 'How to make cappuccino at home',
             date: '2021.11.26',
             thumb: cappuccino
         }
