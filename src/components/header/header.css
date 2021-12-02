@@ -111,7 +111,7 @@
         align-items: center;
         height: 115vh;
         width: 100vw;
-        margin-top: 50%;
+        margin-top: 70%;
         background: #242222;
         position: fixed;
         opacity: 1;
@@ -134,8 +134,9 @@
     }
     .nav-links {
         margin: 0;
+        width: 100%;
         text-align: center;
-        height: 8%;
+        height: 100%;
         font-size: 1.5em;
     }
 
@@ -147,11 +148,10 @@
 
     .menu-icon {
         display: flex;
-        position: relative;
-
+        position: fixed;
         font-size: 1.8rem;
         cursor: pointer;
-        margin-left:70%;
+        margin-left:75%;
         z-index: 4;
         width: 20px;
     }
