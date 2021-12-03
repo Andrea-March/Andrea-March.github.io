@@ -3,12 +3,11 @@ import './articlePage.css'
 import placeholder from '../../../static/coffee-cup-ok2.jpg'
 import Related from "../related/Related";
 import ArticleList from "../../../mock/Articles";
-import {useParams} from "react-router-dom";
 
 
 const ArticlePage = () => {
 
-    const { id } = useParams();
+    //const { id } = useParams();
 
     const emptyArticle = {
         id: -1,
