@@ -31,10 +31,6 @@
 
 }
 
-
-input {
-    margin: 3%
-}
 .name-input {
     font-family: inherit;
     border: 0;
@@ -46,39 +42,25 @@ input {
     transition: border-color 0.2s;
 }
 
-
-.name-input:focus {
+input:focus {
     font-weight: 700;
     border-width: 3px;
 }
 
-
-.name-input::placeholder{
-    transition: all .3s ease-in-out;
-}
-.email-input::placeholder{
+input::placeholder{
     font-weight: normal;
     transition: all .3s ease-in-out;
 }
-.email-input:focus::placeholder {
-    color: transparent;
-    font-weight: normal;
-}
-.name-input:focus::placeholder {
+input:focus::placeholder {
     color: transparent;
     font-weight: normal;
 }
 
-.email-input:valid{
+input:valid{
     font-weight: 700;
     border-width: 3px;
 }
 
-
-.name-input:valid{
-    font-weight: 700;
-    border-width: 3px;
-}
 
 .email-input {
     margin-top: 0;
@@ -94,15 +76,12 @@ input {
 }
 input{
     text-align: center;
+    margin: 3%
 }
 p{
     text-align: center;
 }
 
-.email-input:focus {
-    font-weight: 700;
-    border-width: 3px;
-}
 
 .message-text{
     min-height: 200px;
@@ -113,19 +92,19 @@ p{
     padding: 10px;
     color:  #9b9b9b;
 }
-.message-text:focus {
+textarea:focus {
     font-weight: 700;
     border-width: 3px;
 }
 
-.message-text::placeholder{
+textarea::placeholder{
     transition: all .3s ease-in-out;
 }
-.message-text:focus::placeholder {
+textarea:focus::placeholder {
     color: transparent;
     font-weight: normal;
 }
-.message-text:valid{
+textarea:valid{
     font-weight: 700;
     border-width: 3px;
 }
@@ -153,7 +132,7 @@ p{
     .message-text{
         width: 90%;
         height: 400px;
-        resize: none;
+
     }
 
     .max-length{

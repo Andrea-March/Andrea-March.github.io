@@ -147,11 +147,11 @@
     }
 
     .menu-icon {
-        display: flex;
-        position: fixed;
+        display: block;
+        position: absolute;
         font-size: 1.8rem;
         cursor: pointer;
-        margin-left:75%;
+        margin-left: 80vw;
         z-index: 4;
         width: 20px;
     }
