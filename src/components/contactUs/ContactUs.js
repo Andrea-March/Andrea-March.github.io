@@ -27,8 +27,7 @@ const ContactUs = () => {
                 <p>
                     I can be contacted back at my email address:
                 </p>
-                    <input type="email" className="email-input" autoComplete="off" name="mail" id='mail' placeholder="Your Email"
-                           required/>
+                    <input type="email" className="email-input" autoComplete="off" name="mail" id='mail' placeholder="Your Email" />
                     {/*<label htmlFor="mail" className="email-label">Email</label> */}
                 <div className="button-send">
                     Send!
