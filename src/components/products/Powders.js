@@ -7,8 +7,8 @@ const Powders = () =>{
     let productsList = [
         {
             'id': 1,
-            'name': 'Etiopia Worka',
-            'description': 'blended coffee',
+            'name': 'Etiopia Yirgachefe Guji',
+            'description': 'Medium-roasted (ideal for filter coffee)',
             'price': '5',
             'currency': '€/hg',
             'thumb': powder
