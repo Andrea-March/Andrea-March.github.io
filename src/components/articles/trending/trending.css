@@ -1,0 +1,15 @@
+.trending-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #d4dbe0;
+}
+
+@media all and (max-width: 960px) {
+    .trending-list{
+        flex-direction: column;
+        width: 100%;
+    }
+}

@@ -1,39 +1,30 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import ArticleCard from "./article-card/ArticleCard";
 import {useNavigate} from "react-router-dom";
-import chemex from "../../static/v60/v60-ok2.jpg";
-import v60 from '../../static/v60/v60_ok.jpg'
-import french from "../../static/french/french_press_ok.jpg";
-import cappuccino from "../../static/cappuccino/cappuccino_ok.jpg";
 import './ArticlesCarousel.css'
+import ArticleList from "../../mock/Articles";
 
 const ArticlesCarousel = () => {
     const navigate = useNavigate()
     const [currentIndex, setIndex] = useState(0)
-    let articleList = [
-        {
-            id: 1,
-            title: 'The Art of V60',
-            date: '2021.11.26',
-            thumb: v60,
-            alt: 'https://unsplash.com/photos/R1zLaRmi-DE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink'
-        },{
-            id: 2,
-            title: 'The Perfect Frech Press',
-            date: '2021.11.26',
-            thumb: french
-        },{
-            id: 3,
-            title: 'How to make cappuccino at home',
-            date: '2021.11.26',
-            thumb: cappuccino
-        },{
-            id: 4,
-            title: 'The secret to a tasty Chemex',
-            date: '2021.12.02',
-            thumb: chemex
-        }
-    ]
+
+    const emptyArticle = {
+        id: 0,
+        title: '',
+        date: '',
+        thumb: '',
+        related: [{
+            id: -1,
+            title: ''
+        }]
+    }
+
+    const [articleList, setArticleList] = useState([emptyArticle])
+
+    useEffect(()=>{
+        setArticleList(ArticleList)
+    },[])
+
     const handleProceed = (articleId) => {
         articleId && navigate(`/articles/${articleId}`);
     };

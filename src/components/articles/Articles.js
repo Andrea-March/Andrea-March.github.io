@@ -1,6 +1,7 @@
 import React from "react";
 import './articles.css'
 import ArticlesCarousel from "./ArticlesCarousel";
+import Trending from "./trending/Trending";
 
 const Articles = () => {
 
@@ -8,6 +9,12 @@ const Articles = () => {
     return(
         <div className="flex-column">
           <ArticlesCarousel />
+            <div className="trending">
+                <div className="trending-title">
+                    <h1>Trending</h1>
+                </div>
+                <Trending />
+            </div>
             <div className="shortcut-images">
                 <div className="powders shortcut">
                     Powders

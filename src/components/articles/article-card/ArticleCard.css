@@ -4,8 +4,17 @@
     opacity: 1;
 }
 
+.image-wrapper {
+    width: 100%;
+    max-height: 360px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .article-card img{
-    width: 80%
+    width: 80%;
 }
 
 .flex-column {
@@ -26,9 +35,15 @@
     padding: 3%;
     background-color: grey;
     width: 74%;
+    height: 150px;
 }
 
+@media screen and (max-width: 650px) {
 
+    .image-wrapper{
+        max-height: 310px;
+    }
+}
 
 
 /*.right:hover img{

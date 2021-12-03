@@ -1,0 +1,12 @@
+.related-card {
+    margin: 10px;
+    width: 40%;
+}
+
+@media all and (max-width: 700px) {
+    .related-card {
+        margin: 10px;
+        width: 80%;
+    }
+
+}

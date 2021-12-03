@@ -1,16 +1,32 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './articlePage.css'
 import placeholder from '../../../static/coffee-cup-ok2.jpg'
+import Related from "../related/Related";
+import ArticleList from "../../../mock/Articles";
+import {useParams} from "react-router-dom";
 
 
 const ArticlePage = () => {
 
-    //const { id } = useParams();
+    const { id } = useParams();
 
-    //useEffect(()=>{
-        //CALL HERE BACKEND TO GET ARTICLE
-        //console.log(id)
-    //},[])
+    const emptyArticle = {
+        id: -1,
+        title: '',
+        thumb: '',
+        date: '',
+        related: [{
+            id: -1,
+            title: 'EMPTY'
+        }]
+    }
+
+    const [article, setArticle] = useState(emptyArticle)
+
+
+    useEffect(()=>{
+        setArticle(ArticleList[0])
+    },[])
 
     return (
         <div className="article-container">
@@ -69,6 +85,12 @@ const ArticlePage = () => {
                     and almost entirely (leaving just under half a centimeter from the highest point) when you have to pour
                     100g! It is important in this procedure not to wet the higher edges of the ground coffee</p>
             </div>
+
+            <div className="whats-next">
+                <h1 className="whats-next-title"> What's next?</h1>
+                <Related article={article}/>
+            </div>
+
         </div>
     )
 }
