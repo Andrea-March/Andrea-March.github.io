@@ -37,10 +37,10 @@ const Header = () =>{
                             Products
                         </Link></li>
                         <li className="nav-item">
-                            <Link to="/about" className="nav-links" onClick={closeMobileMenu}>About Us</Link>
+                            <Link to="/about" className="nav-links" onClick={closeMobileMenu}>About</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/contact-us" className="nav-links" onClick={closeMobileMenu}>Contact</Link>
+                            <Link to="/contacts" className="nav-links" onClick={closeMobileMenu}>Contact</Link>
                         </li>
                     </ul>
                 </nav>

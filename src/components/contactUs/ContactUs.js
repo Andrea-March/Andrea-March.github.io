@@ -15,7 +15,7 @@ const ContactUs = () => {
                         Hi there! I'm
                     </p>
                     <div className="form-group">
-                        <input type="input" className="name-input" autoComplete="off" name="name" id='name' placeholder="Your Name"
+                        <input type="input" className="name-input input" autoComplete="off" name="name" id='name' placeholder="Your Name"
                                required/>
                         {/*<label htmlFor="name" id="name-label" className="name-label">Name</label> */}
                     </div>
@@ -27,7 +27,7 @@ const ContactUs = () => {
                 <p>
                     I can be contacted back at my email address:
                 </p>
-                    <input type="email" className="email-input" autoComplete="off" name="mail" id='mail' placeholder="Your Email" />
+                    <input type="email" className="email-input input" autoComplete="off" name="mail" id='mail' placeholder="Your Email" />
                     {/*<label htmlFor="mail" className="email-label">Email</label> */}
                 <div className="button-send">
                     Send!

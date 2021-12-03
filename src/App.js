@@ -10,6 +10,7 @@ import Articles from "./components/articles/Articles";
 import ScrollToTop from "./ScrollToTop";
 import ArticlePage from "./components/articles/article-page/ArticlePage";
 import ContactUs from "./components/contactUs/ContactUs";
+import About from "./components/about/About";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
                   <Route exact path='/products/powders' element={<Powders />} />
                   <Route exact path='/products/machines' element={<Machines />} />
                   <Route exact path='/articles' element={<Articles />} />
-                  <Route exact path='/contact-us' element={<ContactUs />} />
+                  <Route exact path='/about' element={<About />} />
+                  <Route exact path='/contacts' element={<ContactUs />} />
               </Routes>
           <Footer />
           </BrowserRouter>

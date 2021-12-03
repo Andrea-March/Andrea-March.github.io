@@ -42,21 +42,21 @@
     transition: border-color 0.2s;
 }
 
-input:focus {
+.input:focus {
     font-weight: 700;
     border-width: 3px;
 }
 
-input::placeholder{
+.input::placeholder{
     font-weight: normal;
     transition: all .3s ease-in-out;
 }
-input:focus::placeholder {
+.input:focus::placeholder {
     color: transparent;
     font-weight: normal;
 }
 
-input:valid{
+.input:valid{
     font-weight: 700;
     border-width: 3px;
 }
@@ -74,11 +74,11 @@ input:valid{
     transition: border-color 0.2s;
     margin-bottom: -2%;
 }
-input{
+.input{
     text-align: center;
     margin: 3%
 }
-p{
+.p{
     text-align: center;
 }
 
@@ -92,19 +92,19 @@ p{
     padding: 10px;
     color:  #9b9b9b;
 }
-textarea:focus {
+.message-text:focus {
     font-weight: 700;
     border-width: 3px;
 }
 
-textarea::placeholder{
+.message-text::placeholder{
     transition: all .3s ease-in-out;
 }
-textarea:focus::placeholder {
+.message-text:focus::placeholder {
     color: transparent;
     font-weight: normal;
 }
-textarea:valid{
+.message-text:valid{
     font-weight: 700;
     border-width: 3px;
 }
