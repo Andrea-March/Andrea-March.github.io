@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import ArticleCard from "./article-card/ArticleCard";
 import {useNavigate} from "react-router-dom";
-import v60 from "../../static/v60/v60-ok2.jpg";
+import chemex from "../../static/v60/v60-ok2.jpg";
+import v60 from '../../static/v60/v60_ok.jpg'
 import french from "../../static/french/french_press_ok.jpg";
 import cappuccino from "../../static/cappuccino/cappuccino_ok.jpg";
 import './ArticlesCarousel.css'
@@ -14,7 +15,8 @@ const ArticlesCarousel = () => {
             id: 1,
             title: 'The Art of V60',
             date: '2021.11.26',
-            thumb: v60
+            thumb: v60,
+            alt: 'https://unsplash.com/photos/R1zLaRmi-DE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink'
         },{
             id: 2,
             title: 'The Perfect Frech Press',
@@ -25,6 +27,11 @@ const ArticlesCarousel = () => {
             title: 'How to make cappuccino at home',
             date: '2021.11.26',
             thumb: cappuccino
+        },{
+            id: 4,
+            title: 'The secret to a tasty Chemex',
+            date: '2021.12.02',
+            thumb: chemex
         }
     ]
     const handleProceed = (articleId) => {
@@ -45,9 +52,13 @@ const ArticlesCarousel = () => {
     return(
         <div className="cover-articles">
             <ArticleCard article={articleList[getPrevious(currentIndex)]} position={"left"} onClick={()=>{}}/>
-            <i className="fa fa-angle-left fa-3x" onClick={slideLeft}/>
+            <div className="sliding-arrow" onClick={slideLeft}>
+                <i className="fa fa-angle-left fa-3x"/>
+            </div>
             <ArticleCard article={articleList[currentIndex]} position={"center"} onClick={handleProceed}/>
-            <i className="fa fa-angle-right fa-3x" onClick={slideRight}/>
+            <div className="sliding-arrow right-arr" onClick={slideRight}>
+                <i className="fa fa-angle-right fa-3x"/>
+            </div>
             <ArticleCard article={articleList[getNext(currentIndex)]} position={"right"} onClick={()=>{}}/>
         </div>
     )
