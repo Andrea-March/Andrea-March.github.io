@@ -7,7 +7,7 @@ import me from '../../static/me.jpg'
 const About = () => {
     return (
         <div className="about-container">
-            <img src={me} className="me"/>
+            <img src={me} className="me" alt="me"/>
             <div className="me-description">
                 <p>
                     My name is Andrea, and I'm a coffee lover!
