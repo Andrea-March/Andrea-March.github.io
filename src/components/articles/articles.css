@@ -15,7 +15,7 @@
     flex-direction: row;
 }
 .powders {
-    background-image: url("../../static/cover.jpg");
+    background-image: url("../../static/cover.webp");
 }
 
 .machines {
@@ -24,7 +24,7 @@
 
 
 .curiosities {
-    background-image: url("../../static/cappuccino.jpg");
+    background-image: url("../../static/cappuccino.webp");
 }
 
 .shortcut {

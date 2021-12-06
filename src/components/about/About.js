@@ -1,7 +1,7 @@
 import React from "react";
 
 import './About.css'
-import me from '../../static/me.jpg'
+import me from '../../static/me.webp'
 
 
 const About = () => {

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './header.css'
-import logo from '../../static/coffee2.png'
+import logo from '../../static/coffee2.webp'
 import {Link} from "react-router-dom";
 
 const Header = () =>{

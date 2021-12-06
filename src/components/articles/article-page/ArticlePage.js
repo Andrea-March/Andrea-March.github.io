@@ -1,6 +1,11 @@
 import React, {useEffect, useState} from "react";
 import './articlePage.css'
-import placeholder from '../../../static/coffee-cup-ok2.jpg'
+import placeholder from '../../../static/coffee-cup-ok2.webp'
+import coverArticle from '../../../static/mine/cover_2.jpg'
+import need from '../../../static/mine/need.jpg'
+import step1 from '../../../static/mine/step_1.gif'
+import step4 from '../../../static/mine/step_4.gif'
+import gentle from '../../../static/mine/step_2.gif'
 import Related from "../related/Related";
 import ArticleList from "../../../mock/Articles";
 
@@ -22,13 +27,26 @@ const ArticlePage = () => {
 
     const [article, setArticle] = useState(emptyArticle)
 
+    const scrollListener = () => {
+        let scroll = window.scrollY
+        let y  = (scroll/100)
+        let scale = (100+scroll/5)/100
+        document.getElementById("article-cover-image").style = `transform: translate3d(-50%, -${y+15}%, 0) scale(${scale})`
+    }
 
     useEffect(()=>{
         setArticle(ArticleList[0])
+        window.addEventListener('scroll', scrollListener)
+        return () => {
+            window.removeEventListener('scroll', scrollListener)
+        }
     },[])
 
     return (
         <div className="article-container">
+            <div className="zoom-article-cover">
+                <img id="article-cover-image" src={coverArticle} alt={"coffee on shelf"}/>
+            </div>
             <div className="inner-article-container">
                 <h1>The Art Of V60</h1>
                 <div className="abstract">
@@ -45,9 +63,9 @@ const ArticlePage = () => {
                 </p>
                 <p>
                     To prepare our coffee, we will use a medium-sized and medium roast ground , perfect for this type of brewing.
-                    In particular, I am using an Ethiopia Works, as I really love the characteristics and aromas of this ground coffee.
+                    In particular, I am using an Ethiopia Yirgachefe Guji, as I really love the characteristics and aromas of this ground coffee.
                 </p>
-                <img src={placeholder} alt=""/>
+                <img src={need} className="gif" alt=""/>
                 <p>
                     To begin with, we grind our favorite coffee by adjusting our grinder to a medium size,
                     so as to have a perfect powder for our brewing. Let's put the ground coffee aside and let's get all set to prepare our V60!
@@ -60,19 +78,19 @@ const ArticlePage = () => {
                     that will collect our coffee, so as to have a drink as warm as a toast at the end of the brewing.
                     Be sure to remove the water we just spilled from the ampoule!
                 </p>
-                <img src={placeholder} alt=""/>
+                <img src={step1} className="gif" alt=""/>
                 <p> Now that everything is ready, we place the ground coffee inside the filter, and we equalize the content
                     by gently tapping the structure, until we are satisfied with the arrangement of the coffee.
                     It is important that the ground coffee is evenly placed inside the filter,
                     to prevent the water from flowing in points where we have less ground, thus obtaining a watered-down drink.
                 </p>
-                <img src={placeholder} alt=""/>
+                <img src={gentle} className="gif" alt=""/>
                 <p>
                     At this point, pour 50 g (what if I do not have a scale?) of water in concentric circles in the center of the ground coffee (without pouring on the edges of the ground coffee!) and wait 30 seconds. This time should be enough to filter almost all of the water we just poured out. We proceed to pour 100g of water (at most until it reaches half a centimeter below the limit of the ground) again with concentric movements and taking care not to pour on the edges of the ground.
                     Now let's wait 60 seconds, which should be enough to drain the water we poured out.
                     At the end of this time, pour the remaining 50g of water with the same movements, which should take another 30 seconds to filter completely.
                 </p>
-                <img src={placeholder} alt=""/>
+                <img src={step4} className="gif" alt=""/>
                 <p>Our coffee should be ready at this point, and we will be able to taste and appreciate all its hidden aromas and flavors!</p>
                 <img src={placeholder} alt=""/>
                 <p>If the extraction took longer than the time we have indicated, we recommend trying and coarsening the grinding next time.

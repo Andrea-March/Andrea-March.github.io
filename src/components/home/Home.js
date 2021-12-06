@@ -1,9 +1,9 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import coffeeflavors from '../../static/coffee-flavors2.jpg'
-import coffeecup from '../../static/coffee-cup-ok2.jpg'
-import espresso from '../../static/espresso-ok2.jpg'
-import whoweare from '../../static/background.jpg'
+import coffeeflavors from '../../static/coffee-flavors2.webp'
+import coffeecup from '../../static/coffee-cup-ok2.webp'
+import espresso from '../../static/espresso-ok2.webp'
+import whoweare from '../../static/background.webp'
 import './home.css'
 
 const Home = () =>{
@@ -30,7 +30,7 @@ const Home = () =>{
                     <p>Discover the warm taste of a single origin coffee, with intense flavors and aromas</p>
                     <img src={coffeecup} onClick={goToArticles} alt=""/>
                 </div>
-                <div className="gallery-element">
+                <div className="gallery-element last">
                     <p>Discover the best coffee extraction methods, to fully enjoy your cup and appreciate all the nuances of your coffee</p>
                     <img src={espresso} onClick={goToArticles} alt=""/>
                 </div>
