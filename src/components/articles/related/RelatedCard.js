@@ -15,7 +15,9 @@ const RelatedCard = ({related}) => {
     }
     return(
         <div className={`article-card flex-column related-card`} onClick={() => navigateToArticle(related?.id || 1)}>
-            <img src={related?.thumb || placeholder} alt={related?.alt || ''}/>
+            <div className="related-image">
+                <img src={related?.thumb || placeholder} alt={related?.alt || ''}/>
+            </div>
             <div className="card-data flex-column">
                 <div className="card-title">{related?.title || 'title here'}</div>
                 <div className="card-date">{related?.date || 'date here'}</div>

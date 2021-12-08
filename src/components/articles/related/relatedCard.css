@@ -1,11 +1,27 @@
 .related-card {
-    margin: 10px;
-    width: 40%;
+    margin: 50px 20px 20px 20px;
+    width: 35%;
+}
+.related-card:hover{
+    cursor: pointer;
+}
+.related-card:hover img{
+    transform: scale(1.2);
+}
+
+.related-image {
+    overflow: hidden;
+    max-height: 500px;
+    width: 80% !important;
 }
 
 @media all and (max-width: 700px) {
     .related-card {
         margin: 10px;
         width: 80%;
+    }
+
+    .related-image {
+        max-height: 40vh;
     }
 }

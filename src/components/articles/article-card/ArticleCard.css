@@ -3,7 +3,6 @@
     z-index: 3;
     opacity: 1;
     transition: all 0.3s ease-in-out;
-
 }
 
 .center:hover{
@@ -51,7 +50,6 @@
 }
 
 @media screen and (max-width: 650px) {
-
     .image-wrapper{
         max-height: 310px;
     }

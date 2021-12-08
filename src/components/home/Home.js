@@ -22,11 +22,11 @@ const Home = () =>{
                 <div className="gallery-title">
                     <p>Find out all about coffee</p>
                 </div>
-                <div className="gallery-element pr-10 ">
+                <div className="gallery-element">
                     <p>Discover the warm taste of a single origin coffee, and let yourself be lulled by its fresh and intense flavors and aromas</p>
                     <img src={coffeeflavors} onClick={goToArticles} alt=""/>
                 </div>
-                <div className="gallery-element pl-10 right-description">
+                <div className="gallery-element right-description">
                     <p>Discover the warm taste of a single origin coffee, with intense flavors and aromas</p>
                     <img src={coffeecup} onClick={goToArticles} alt="https://unsplash.com/photos/nBJHO6wmRWw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
                 </div>
