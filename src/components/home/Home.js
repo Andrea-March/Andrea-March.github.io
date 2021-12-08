@@ -28,7 +28,7 @@ const Home = () =>{
                 </div>
                 <div className="gallery-element pl-10 right-description">
                     <p>Discover the warm taste of a single origin coffee, with intense flavors and aromas</p>
-                    <img src={coffeecup} onClick={goToArticles} alt=""/>
+                    <img src={coffeecup} onClick={goToArticles} alt="https://unsplash.com/photos/nBJHO6wmRWw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
                 </div>
                 <div className="gallery-element last">
                     <p>Discover the best coffee extraction methods, to fully enjoy your cup and appreciate all the nuances of your coffee</p>

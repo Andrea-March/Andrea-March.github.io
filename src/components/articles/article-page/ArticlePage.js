@@ -1,18 +1,22 @@
 import React, {useEffect, useState} from "react";
 import './articlePage.css'
+import '../../../shared/styles/SharedStyles.css'
 import placeholder from '../../../static/coffee-cup-ok2.webp'
-import coverArticle from '../../../static/mine/cover_2.jpg'
+import coverArticle from '../../../static/bar.jpg'
 import need from '../../../static/mine/need.jpg'
 import step1 from '../../../static/mine/step_1.gif'
 import step4 from '../../../static/mine/step_4.gif'
 import gentle from '../../../static/mine/step_2.gif'
 import Related from "../related/Related";
 import ArticleList from "../../../mock/Articles";
+import {useNavigate} from "react-router-dom";
+import GoBack from "../../../shared/components/go-back/GoBack";
 
 
 const ArticlePage = () => {
 
     //const { id } = useParams();
+    const navigation = useNavigate()
 
     const emptyArticle = {
         id: -1,
@@ -26,6 +30,11 @@ const ArticlePage = () => {
     }
 
     const [article, setArticle] = useState(emptyArticle)
+
+    const goBack = () => {
+        navigation("/articles")
+    }
+
 
     const scrollListener = () => {
         let scroll = window.scrollY
@@ -43,26 +52,24 @@ const ArticlePage = () => {
     },[])
 
     return (
-        <div className="article-container">
+        <div className="flex-column w-100 article-container">
             <div className="zoom-article-cover">
                 <img id="article-cover-image" src={coverArticle} alt={"coffee on shelf"}/>
             </div>
-            <div className="inner-article-container">
-                <h1>The Art Of V60</h1>
-                <div className="abstract">
-                    <p className="abstract-title">What you'll need</p>
-                    <ol className="abstract-body">
-                        <li> Time: 3 minutes</li>
-                        <li> Ground: 15 g per mug</li>
-                    </ol>
+            <div className="flex-column w-100 fs-15">
+                <div className="sticky-title">
+                   <GoBack onClick={goBack} text={"All Articles"}/>
+                    <h1>The Art Of V60</h1>
                 </div>
+                <div className="pr-10 w-60 art-body">
                 <p>
                     Have you ever wondered how you get a great v60?
                     Today we will discover together some of the details that will make your coffee tasty,
                     and that will make you appreciate all the hidden nuances of your ground coffee.
                 </p>
+                <h4 className="fs-13">Preparation</h4>
                 <p>
-                    To prepare our coffee, we will use a medium-sized and medium roast ground , perfect for this type of brewing.
+                    To prepare our coffee, we will use a medium-sized and medium roast ground, perfect for this type of brewing.
                     In particular, I am using an Ethiopia Yirgachefe Guji, as I really love the characteristics and aromas of this ground coffee.
                 </p>
                 <img src={need} className="gif" alt=""/>
@@ -70,6 +77,7 @@ const ArticlePage = () => {
                     To begin with, we grind our favorite coffee by adjusting our grinder to a medium size,
                     so as to have a perfect powder for our brewing. Let's put the ground coffee aside and let's get all set to prepare our V60!
                 </p>
+                <h4 className="fs-13">Coffee Brewing</h4>
                 <p>
                     First, we put a paper filter inside our v60, and we let hot water fall all over the surface of the filter.
                     At the end of the procedure, the entire surface of the filter should be well adherent to the walls,
@@ -101,10 +109,15 @@ const ArticlePage = () => {
                     No worries! Simply cover the ground coffee halfway up when you have to pour 50g of water,
                     and almost entirely (leaving just under half a centimeter from the highest point) when you have to pour
                     100g! It is important in this procedure not to wet the higher edges of the ground coffee</p>
+                </div>
             </div>
 
-            <div className="whats-next">
-                <h1 className="whats-next-title"> What's next?</h1>
+            <div>
+                <div className="sticky-title">
+                    <GoBack onClick={goBack} text={"All Articles"} />
+                    <h1>What's next?</h1>
+                </div>
+
                 <Related article={article}/>
             </div>
 

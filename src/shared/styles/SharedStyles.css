@@ -1,0 +1,60 @@
+.sticky-title {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    height: 80px;
+    background-color: grey;
+    width: 100%;
+    z-index: 910;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.sticky-title h1 {
+    padding-right: 20%;
+}
+
+.flex-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.fs-13 {
+    font-size: 1.3rem;
+}
+
+.fs-15 {
+    font-size: 1.5rem;
+}
+
+.pr-10 {
+    padding-right: 10%;
+}

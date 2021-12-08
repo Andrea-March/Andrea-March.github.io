@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-import './related.css'
+import '../../../shared/styles/SharedStyles.css'
 import RelatedCard from "./RelatedCard";
 
 
@@ -20,7 +20,7 @@ const Related = ({article}) => {
     },[article.related])
 
     return (
-        <div className="related-list">
+        <div className="flex-row flex-wrap">
             { relatedList.map((related) => {
                 return (
                   <RelatedCard related={related} />

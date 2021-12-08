@@ -1,0 +1,30 @@
+
+.go-back-div {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.1rem;
+    width: 10%;
+    right: 80%
+}
+
+.go-back-div i{
+    position: relative;
+    top: 23px;
+    right: 10px;
+}
+
+.go-back-div:hover {
+    cursor: pointer;
+}
+.go-back-div p{
+    text-align: left;
+    width: 85%;
+    font-size: 1.5em;
+}
+
+@media all and (max-width: 700px) {
+    .go-back-div {
+        display: none;
+    }
+}
