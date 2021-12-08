@@ -67,7 +67,7 @@
     font-size: 1.5em;
     transition: all .3s ease-in-out;
     align-self: flex-start;
-    text-align: center;
+    text-align: left;
     padding: 5%;
 }
 .gallery-element p:hover{
@@ -77,6 +77,10 @@
 
 .right-description{
     flex-direction: row-reverse;
+}
+
+.right-description p {
+    text-align: right;
 }
 
 .whoarewe{
