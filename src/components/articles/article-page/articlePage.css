@@ -22,7 +22,7 @@
     will-change: -webkit-filter, filter, transform; */
 }
 
-@media all and (max-width: 700px){
+@media all and (max-width: 820px){
     .art-body{
         width: 95% !important;
         padding-right: 0 !important;

@@ -33,15 +33,15 @@
     opacity: 0.5;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 820px) {
     .cover-articles{
 
     }
     .left {
-        display: none;
+        display: none !important;
     }
     .right {
-        display: none;
+        display: none !important;
     }
 
     .center {
