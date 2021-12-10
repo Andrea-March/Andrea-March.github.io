@@ -7,7 +7,7 @@
     height: 700px;
     background-image: url("../../static/cover-opacity.webp");
     background-size: cover;
-    background-color: grey;
+    background-color: var(--primary);
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
@@ -35,7 +35,8 @@
 
 @media screen and (max-width: 820px) {
     .cover-articles{
-
+        height: 450px;
+        justify-content: space-between;
     }
     .left {
         display: none !important;
@@ -45,10 +46,10 @@
     }
 
     .center {
-        width: 80%;
+        width: 70%;
     }
     .sliding-arrow {
-        width: auto;
+        width: 10%;
         padding-right: 6px;
         margin: 0;
     }

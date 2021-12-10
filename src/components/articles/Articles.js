@@ -11,11 +11,12 @@ const Articles = () => {
           <ArticlesCarousel />
             <div className="trending">
                 <div className="trending-title">
-                    <h1>Trending</h1>
+                    <h1>All Articles</h1>
                 </div>
                 <Trending />
             </div>
-            <div className="shortcut-images">
+            {/*
+             <div className="shortcut-images">
                 <div className="powders shortcut">
                     Powders
                 </div>
@@ -26,6 +27,8 @@ const Articles = () => {
                     Curiosities
                 </div>
             </div>
+            */}
+
         </div>
     )
 }

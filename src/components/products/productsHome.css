@@ -1,7 +1,7 @@
 .product-types {
     position: relative;
     /*background-image: url("./static/background.jpg");*/
-    background-color: grey;
+    background-color: var(--primary);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,7 +14,7 @@
 .product-single-type {
     width: 25%;
     height: 100%;
-    background-color: grey;
+    background-color: var(--primary);
     justify-content: center;
     text-align: center;
     transition: all .3s ease-in-out;
@@ -31,7 +31,7 @@
     text-align: center;
 }
 
-@media all and (max-width: 750px){
+@media all and (max-width: 820px){
     .product-types {
         flex-direction: column;
     }

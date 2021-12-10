@@ -1,6 +1,6 @@
 .shortcut-images{
     width: 100%;
-    background-color: #d4dbe0;
+    background-color: var(--accent);
     height: 600px;
     justify-content: space-around;
     display: flex;
@@ -31,7 +31,7 @@
     width: 25%;
     position: relative;
     background-size: cover;
-    background-color: grey;
+    background-color: var(--primary);
     background-position: center;
     background-repeat: no-repeat;
     transition: all 0.3s ease-in-out;
@@ -44,7 +44,7 @@
 }
 
 .trending {
-    background-color: grey;
+    background-color: var(--primary);
     width: 100%;
     display: flex;
     align-items: center;
@@ -53,11 +53,24 @@
 }
 
 .trending-title {
-    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    top: 65%;
+    background-color: var(--primary);
+}
+.trending-title h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 2%;
+
 }
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 820px) {
     .shortcut-images{
         flex-direction: column;
     }
@@ -67,7 +80,21 @@
         margin: 10px;
     }
 
-    .center {
-        width: 80%;
+    .trending-title {
+        position: relative;
+        height: 100px;
+        justify-content: center;
+    }
+    .trending-title h1 {
+        font-size: 2rem;
+        padding: 0;
+    }
+}
+
+@media screen and (max-height: 900px){
+    .trending-title {
+        position: relative;
+        height: 100px;
+        top: 65%;
     }
 }

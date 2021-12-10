@@ -1,35 +1,20 @@
 import React, {useEffect, useState} from "react";
 import './articlePage.css'
 import '../../../shared/styles/SharedStyles.css'
-import placeholder from '../../../static/coffee-cup-ok2.webp'
-import coverArticle from '../../../static/bar.jpg'
-import need from '../../../static/mine/need.jpg'
-import step1 from '../../../static/mine/step_1.gif'
-import step4 from '../../../static/mine/step_4.gif'
-import gentle from '../../../static/mine/step_2.gif'
-import Related from "../related/Related";
-import ArticleList from "../../../mock/Articles";
+import {articleMock} from "../../../mock/Articles";
 import {useNavigate} from "react-router-dom";
 import GoBack from "../../../shared/components/go-back/GoBack";
+import RelatedCard from "../related/RelatedCard";
 
 
 const ArticlePage = () => {
 
+
     //const { id } = useParams();
     const navigation = useNavigate()
 
-    const emptyArticle = {
-        id: -1,
-        title: '',
-        thumb: '',
-        date: '',
-        related: [{
-            id: -1,
-            title: 'EMPTY'
-        }]
-    }
 
-    const [article, setArticle] = useState(emptyArticle)
+    const [article, setArticle] = useState(undefined)
 
     const goBack = () => {
         navigation("/articles")
@@ -44,85 +29,132 @@ const ArticlePage = () => {
     }
 
     useEffect(()=>{
-        setArticle(ArticleList[0])
+        setArticle(articleMock)
         window.addEventListener('scroll', scrollListener)
         return () => {
             window.removeEventListener('scroll', scrollListener)
         }
     },[])
-
+    if (article) {
     return (
         <div className="flex-column w-100 article-container">
             <div className="zoom-article-cover">
-                <img id="article-cover-image" src={coverArticle} alt={"coffee on shelf"}/>
+                <img id="article-cover-image" src={article?.cover} alt={"coffee on shelf"}/>
             </div>
             <div className="flex-column w-100 fs-15">
                 <div className="sticky-title">
-                   <GoBack onClick={goBack} text={"All Articles"}/>
-                    <h1>The Art Of V60</h1>
+                    <GoBack onClick={goBack} text={"All Articles"}/>
+                    <h1>{article?.title}</h1>
                 </div>
                 <div className="pr-10 w-60 art-body">
-                <p>
-                    Have you ever wondered how you get a great v60?
-                    Today we will discover together some of the details that will make your coffee tasty,
-                    and that will make you appreciate all the hidden nuances of your ground coffee.
-                </p>
-                <h4 className="fs-13">Preparation</h4>
-                <p>
-                    To prepare our coffee, we will use a medium-sized and medium roast ground, perfect for this type of brewing.
-                    In particular, I am using an Ethiopia Yirgachefe Guji, as I really love the characteristics and aromas of this ground coffee.
-                </p>
-                <img src={need} className="gif" alt=""/>
-                <p>
-                    To begin with, we grind our favorite coffee by adjusting our grinder to a medium size,
-                    so as to have a perfect powder for our brewing. Let's put the ground coffee aside and let's get all set to prepare our V60!
-                </p>
-                <h4 className="fs-13">Coffee Brewing</h4>
-                <p>
-                    First, we put a paper filter inside our v60, and we let hot water fall all over the surface of the filter.
-                    At the end of the procedure, the entire surface of the filter should be well adherent to the walls,
-                    and the water we have poured will be collected by the ampoule in which we will collect our coffee.
-                    This serves not only to prepare the filter, making it very moist and adherent, but also to heat the ampoule
-                    that will collect our coffee, so as to have a drink as warm as a toast at the end of the brewing.
-                    Be sure to remove the water we just spilled from the ampoule!
-                </p>
-                <img src={step1} className="gif" alt=""/>
-                <p> Now that everything is ready, we place the ground coffee inside the filter, and we equalize the content
-                    by gently tapping the structure, until we are satisfied with the arrangement of the coffee.
-                    It is important that the ground coffee is evenly placed inside the filter,
-                    to prevent the water from flowing in points where we have less ground, thus obtaining a watered-down drink.
-                </p>
-                <img src={gentle} className="gif" alt=""/>
-                <p>
-                    At this point, pour 50 g (what if I do not have a scale?) of water in concentric circles in the center of the ground coffee (without pouring on the edges of the ground coffee!) and wait 30 seconds. This time should be enough to filter almost all of the water we just poured out. We proceed to pour 100g of water (at most until it reaches half a centimeter below the limit of the ground) again with concentric movements and taking care not to pour on the edges of the ground.
-                    Now let's wait 60 seconds, which should be enough to drain the water we poured out.
-                    At the end of this time, pour the remaining 50g of water with the same movements, which should take another 30 seconds to filter completely.
-                </p>
-                <img src={step4} className="gif" alt=""/>
-                <p>Our coffee should be ready at this point, and we will be able to taste and appreciate all its hidden aromas and flavors!</p>
-                <img src={placeholder} alt=""/>
-                <p>If the extraction took longer than the time we have indicated, we recommend trying and coarsening the grinding next time.
-                    If instead it took shorter, try finer!</p>
+                    <p>
+                        While it is true that a good coffee is obtained with an excellent extraction, it is equally true that how we have preserved our coffee is essential to obtain a drink with strong tastes and aromas.
+                        Let's see what are the tricks to better preserve our coffee, and what are the mistakes to be avoided absolutely.
+                    </p>
+                    <h4>The perfect time for grinding</h4>
+                    <p>
+                        There is a big difference in storage time between the whole bean and a ground coffee.
+                        In fact, the whole bean still retains its intense flavors and aromas for about a month after roasting, while the ground for at most 2 weeks!
+                        This is because after grinding, a larger surface is exposed to the air, which through the oxidation process will quickly spoil our favorite coffee.
+                    </p>
+                        <span>
+                        To prevent this from happening, and to make sure you fully savor all the hidden flavors, it is best to grind your coffee just before using it.
+                        </span>
 
+                    <p>
+                        For this reason, a heavy coffee drinker should consider making a preparation and buying a manual grinder (more affordable) or an electric one (typically more expensive).
+                        <br/>
+                        Also, to make sure you always have new coffee, we recommend buying small quantities on a regular basis.
+                        This prevents part of the large packet of coffee we bought from being left unused for a long time and thus losing its flavors.
+                    </p>
+                    <h4>Avoid Air, Light, Heat and Moisture!</h4>
+                    <p>
+                        Even if we cannot always grind our coffee immediately before using it, we can certainly be careful about its conservation, even if we have bought it already ground.
+                        As we have already learned, air is one of the main enemies of coffee, as oxidation accelerates its stale process.
+                        For this reason it is necessary to keep the coffee sealed and with as little air as possible in the container.
+                    </p>
+                    <span>
+                        Coffee is sometimes sold in ziplock bags, and this is a great way to make sure no air can get in once the container is sealed.
+                    </span>
+                    <p>
+                        In addition, when the ziplock is present, there is also a small valve from which we can let out as much air as we can once the container has been closed.
+                    </p>
+                    <span>
+                        An alternative is to pour the coffee into an airtight container as soon as possible,
+                    </span>
+                    <p>
+                        and try to let out as much air as possible to reduce the amount of oxygen our precious coffee is in contact with.
+                    </p>
+                    <p>
+                        In addition to oxygen, direct exposure to sunlight also contributes to making our coffee stale faster, due to a process called 'photodegradation'
+                        for this reason
+                    </p>
+                    <span>
+                        Our container should be opaque
+                    </span>
+                    <p>
+                        so as not to allow direct light to interact with our coffee. If we don't have an opaque container, don't worry!
+                        It will be sufficient to store it in a place not exposed to direct sunlight.
+                    </p>
+                    <p>
+                        the last enemy of coffee is humidity. Our whole beans and ground coffee attract moisture, but this isn't good for the end result at all.
+                        For this reason it is necessary to keep the coffee in a dry place and
+                    </p>
+                    <span>
+                        Absolutely avoid the refrigerator or freezer!
+                    </span>
+                    <p>
+                        In fact, the continuous change of temperature when taking the coffee and putting it back in the cold, causes the appearance of condensation,
+                        which is absorbed by the coffee, ruining the aromas.
+                    </p>
+                    <h4>Be roast-aware</h4>
+                    <p>
+                        It may be that the most avid coffee drinkers choose to toast their beans on their own, but I believe that most coffee lovers buy their beans already roasted.
+                        In this case it is very important to pay attention to the roasting date: from that moment, the coffee slowly begins to lose its properties,
+                        for all the reasons we have seen so far.
+                        Generally, as we have already said,
+                    </p>
+                    <span>
+                        whole beans retain their intense aromas and flavors for about a month after roasting, while ground coffee for at most two weeks
+                    </span>
+                    <p>
+                        When we buy our coffee, we can find the roasting date on the package,
+                        and we must therefore be careful that it is not too much in the past, otherwise we risk that our coffee quickly loses its characteristics.
+                    </p>
+                    <h4>To Sum Up</h4>
+                    <p>
+                        we have learned that storing coffee to preserve its properties longer requires a lot of attention,
+                        but we can summarize in a few small precautions the secret to always having excellent coffee:
+                        <ul className="sum-up">
+                            <li>Try to buy small quantities of whole beans frequently and grind your own coffee just before using it</li>
+                            <li>Check the roasting date: from that moment the coffee slowly begins to lose its properties</li>
+                            <li>Keep the coffee in a cool, dry and dark place, avoiding contact with the air as much as possible</li>
+                        </ul>
+                    </p>
 
-                <p>What if I do not have a scale?<br/>
-                    No worries! Simply cover the ground coffee halfway up when you have to pour 50g of water,
-                    and almost entirely (leaving just under half a centimeter from the highest point) when you have to pour
-                    100g! It is important in this procedure not to wet the higher edges of the ground coffee</p>
                 </div>
             </div>
-
-            <div>
-                <div className="sticky-title">
-                    <GoBack onClick={goBack} text={"All Articles"} />
-                    <h1>What's next?</h1>
+            {
+                article.related &&
+                <div>
+                    <div className="sticky-title">
+                        <GoBack onClick={goBack} text={"All Articles"}/>
+                        <h1>What's next?</h1>
+                    </div>
+                    <div className="flex-row flex-wrap">
+                        {article?.related.map((related) => {
+                            return (
+                                <RelatedCard related={related}/>
+                            )
+                        })}
+                    </div>
                 </div>
-
-                <Related article={article}/>
-            </div>
+            }
 
         </div>
-    )
+    )} else {
+        return (<></>)
+    }
 }
 
 

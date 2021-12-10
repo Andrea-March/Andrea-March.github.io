@@ -44,17 +44,19 @@
 
 .card-data{
     padding: 3%;
-    background-color: grey;
+    background-color: var(--primary);
     width: 74%;
     height: 150px;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 820px) {
     .image-wrapper{
         max-height: 310px;
     }
+    .article-card{
+        height: 400px;
+    }
 }
-
 
 /*.right:hover img{
     transform: scale(1.74) translate(-172%,2%);

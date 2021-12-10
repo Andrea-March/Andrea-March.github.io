@@ -11,3 +11,9 @@ code {
   font-family: monospace source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --mobiletransition: 820px;
+  --primary: grey;
+  --accent: #d4dbe0
+}

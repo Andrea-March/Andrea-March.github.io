@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import ArticleCard from "./article-card/ArticleCard";
 import {useNavigate} from "react-router-dom";
 import './ArticlesCarousel.css'
-import ArticleList from "../../mock/Articles";
+import {ArticleList} from "../../mock/Articles";
 
 const ArticlesCarousel = () => {
     const navigate = useNavigate()
