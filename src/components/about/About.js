@@ -2,9 +2,15 @@ import React from "react";
 
 import './About.css'
 import me from '../../static/me.webp'
+import {useNavigate} from "react-router-dom";
 
 
 const About = () => {
+    const navigate = useNavigate()
+
+    const goToContact = () =>{
+        navigate('/contacts');
+    }
     return (
         <div className="about-container">
             <img src={me} className="me" alt="me"/>
@@ -31,13 +37,10 @@ const About = () => {
                 <p>
                     If you feel like sharing your opinion or experience, don't think twice:
                 </p>
-                <a className="link-to-contacts" href={"/contacts"}>
-                <div className="contact-link-container">
-                    <i className="fa fa-arrow-right arrow-r" />
-                    <p className="go-to-contacts">go to the contact section!</p>
-                    <i className="fa fa-arrow-left arrow" />
+                <div className="contact-link-container" onClick={() => goToContact()}>
+                    <p className="go-to-contacts">- Contact Section! -</p>
                 </div>
-                </a>
+
             </div>
         </div>
     )

@@ -28,11 +28,20 @@
     color: var(--primary);
 }
 .contact-link-container{
-    margin-bottom: 30px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #9b9b9b;
+    flex-direction: row;
+    width: 25%;
+    margin: 5% 5% 30px 5%;
+    border-bottom: 1px grey solid;
+    border-top: 1px grey solid;
+    border-radius: 5px;
+}
+.contact-link-container p{
+   padding: 0;
 }
 .contact-link-container:hover{
    cursor: pointer;
@@ -61,5 +70,8 @@
         font-size: 1.5rem;
         width: 70%;
         text-align:center;
+    }
+    .contact-link-container{
+        width: 75%;
     }
 }

@@ -94,7 +94,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-bottom: 5%;
 }
 
@@ -109,6 +109,30 @@
     transition: all .3s ease-in-out;
 }
 
+.find-out-more {
+    margin: 0;
+    width: 40%;
+    flex-direction: column;
+}
+
+.find-out-more p{
+    width: 75%;
+}
+.find-out-more-btn {
+    text-align: center;
+    color: #9b9b9b;
+    width: 30%;
+    height: 70px;
+    border-bottom: 1px white solid;
+    border-top: 1px white solid;
+    border-radius: 5px;
+}
+.find-out-more-btn {
+    cursor: pointer;
+}
+.find-out-more-btn p{
+    width: 100%
+}
 
 .dFlex {
     display: flex;
@@ -145,7 +169,7 @@
     }
 
     .whoarewe-row img{
-        width: 50%;
+        width: 80%;
         margin: 0;
     }
     .whoarewe-row p{
@@ -157,4 +181,23 @@
     .whoarewe-row{
        flex-direction: column;
     }
+    .find-out-more {
+        width: 90%;
+        height: 450px;
+    }
+    .find-out-more p{
+        width: 90%;
+    }
+    .find-out-more-btn {
+        width: 55%;
+    }
+}
+
+.temporary-div {
+    top: 17%;
+    width: 100%;
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
 }

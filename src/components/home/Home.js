@@ -11,12 +11,19 @@ const Home = () =>{
     const goToArticles = () => {
         navigate('/articles');
     }
+    const goToAbout = () =>{
+        navigate('/about');
+    }
     return (
         <div className="home dFlex">
             <div className="cover" />
             {/* <div className={"btn-enter"} onClick={navigateProducts} id="link-to-page">
                     <p>Lasciati avvolgere dal gusto</p>
                 </div> */}
+            {/*
+                <div className="temporary-div">Site Under Construction!</div>
+                */
+            }
             <div className="logo-write dFlex">For Coffee Lovers</div>
             <div className="gallery flex-column">
                 <div className="gallery-title">
@@ -38,11 +45,21 @@ const Home = () =>{
             </div>
             <div className="flex-column mb-10">
                 <div className="whoarewe dFlex">
-                    <p>Who We Are</p>
+                    <p>About</p>
                 </div>
                 <div className="whoarewe-row">
                     <img src={whoweare} alt=""/>
-                    <p>We are a group of friends sharing the passion for coffee! We'd like to share our passion with everybody, and we have this blog to talk about our favorite beverage!</p>
+                    <div className="find-out-more dFlex">
+                        <p>
+                            My name is Andrea, and I'm a coffee lover! I'd like to share my passion with everybody, and I have this blog to talk about my favorite beverage!
+                        </p>
+                        <p>
+                            Find out more!
+                        </p>
+                        <div className="find-out-more-btn dFlex" onClick={() => goToAbout()}>
+                            <p>- About Me -</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

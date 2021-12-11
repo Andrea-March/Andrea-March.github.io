@@ -2,7 +2,8 @@ import React, {useEffect, useState} from "react";
 import ArticleCard from "./article-card/ArticleCard";
 import {useNavigate} from "react-router-dom";
 import './ArticlesCarousel.css'
-import {getList} from "../../service/retrieve";
+//import {getList} from "../../service/retrieve";
+import {ArticleList} from "../../mock/Articles";
 
 const ArticlesCarousel = () => {
     const navigate = useNavigate()
@@ -23,7 +24,8 @@ const ArticlesCarousel = () => {
     const [articleList, setArticleList] = useState([emptyArticle])
 
     useEffect(()=>{
-        getList().then(setArticleList)
+        setArticleList(ArticleList)
+        //getList().then(setArticleList)
     },[])
 
     const handleProceed = (articleId) => {
@@ -43,6 +45,9 @@ const ArticlesCarousel = () => {
     }
     return(
         <div className="cover-articles">
+            <div className="trending-carousel">
+                <h1>Trending</h1>
+            </div>
             <ArticleCard article={articleList[getPrevious(currentIndex)]} position={"left"} onClick={()=>{}}/>
             <div className="sliding-arrow" onClick={slideLeft}>
                 <i className="fa fa-angle-left fa-3x"/>

@@ -91,7 +91,7 @@ const articleMock= {
     title: 'How To Store Your Coffee',
     body: articleBody,
     date: '2021/04/10',
-    cover: cup,
+    thumb: cup,
     related:[
         {
             id: 2,

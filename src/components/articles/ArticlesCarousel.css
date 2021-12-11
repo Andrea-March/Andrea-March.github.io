@@ -12,6 +12,16 @@
     background-repeat: no-repeat;
     z-index: 1;
 }
+.trending-carousel{
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    top: 0;
+    height: 70px;
+    font-size: 2rem;
+    padding-left: 4%;
+    text-align: left;
+}
 
 .sliding-arrow {
     display: flex;
@@ -37,6 +47,9 @@
     .cover-articles{
         height: 450px;
         justify-content: space-between;
+    }
+    .trending-carousel {
+        display: none;
     }
     .left {
         display: none !important;
