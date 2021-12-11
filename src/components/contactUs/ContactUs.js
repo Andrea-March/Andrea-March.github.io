@@ -1,9 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 
 import './ContactUs.css'
+import {send} from "../../service/retrieve";
 
 
 const ContactUs = () => {
+
+    const [name, setName] = useState("")
+    const [mail, setMail] = useState("")
+    const [message, setMessage] = useState("")
+    const sendMessage = () => {
+        if(message !== ""){
+            send({name: name, message: message, mail: mail}).then(()=> console.log('sent!'))
+        }
+    }
 
     return(
         <div className="contact-us">
@@ -16,20 +26,20 @@ const ContactUs = () => {
                     </p>
                     <div className="form-group">
                         <input type="input" className="name-input input" autoComplete="off" name="name" id='name' placeholder="Your Name"
-                               required/>
+                               required onChange={(e)=>{setName(e.target.value)}}/>
                         {/*<label htmlFor="name" id="name-label" className="name-label">Name</label> */}
                     </div>
                     <p>
                         and this is my message for you:
                     </p>
-                <textarea placeholder="Be Nice :)" className="message-text" required maxLength={500}/>
+                <textarea placeholder="Be Nice :)" className="message-text" required maxLength={500} onChange={(e) =>{setMessage(e.target.value);console.log(message)}}/>
                 <p className="max-length">max length: 500 words</p>
                 <p>
                     I can be contacted back at my email address:
                 </p>
-                    <input type="email" className="email-input input" autoComplete="off" name="mail" id='mail' placeholder="Your Email" />
+                    <input type="email" className="email-input input" autoComplete="off" name="mail" id='mail' placeholder="Your Email" onChange={(e)=>setMail(e.target.value)}/>
                     {/*<label htmlFor="mail" className="email-label">Email</label> */}
-                <div className="button-send">
+                <div className="button-send" onClick={() => sendMessage()}>
                     <p>- Send! -</p>
                 </div>
 

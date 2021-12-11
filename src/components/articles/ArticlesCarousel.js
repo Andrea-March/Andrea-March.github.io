@@ -13,6 +13,7 @@ const ArticlesCarousel = () => {
         title: '',
         date: '',
         thumb: '',
+        imgalt: '',
         related: [{
             id: -1,
             title: ''

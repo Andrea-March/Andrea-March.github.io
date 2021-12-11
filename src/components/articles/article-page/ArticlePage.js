@@ -40,16 +40,15 @@ const ArticlePage = () => {
     return (
         <div className="flex-column w-100 article-container">
             <div className="zoom-article-cover">
-                <img id="article-cover-image" src={article?.thumb} alt={"coffee on shelf"}/>
+                <img id="article-cover-image" src={article.thumb} alt={article.imgalt}/>
             </div>
             <div className="flex-column w-100 fs-15">
                 <div className="sticky-title">
                     <GoBack onClick={goBack} text={"All Articles"}/>
-                    <h1>{article?.title}</h1>
+                    <h1>{article.title}</h1>
                 </div>
                 <div className="pr-10 w-60 art-body">
                    <ReactMarkdown children={article.body} />
-
                 </div>
             </div>
             {

@@ -17,14 +17,7 @@
 
 
 
-li{
-  font-size: 14px;
-  margin-left: 15px;
-  padding: 10px;
-  box-sizing: border-box;
-  cursor: pointer;
-  float: left;
-}
+
 .fa{
   cursor: pointer;
   margin-left: 15px;
