@@ -30,7 +30,7 @@ const ContactUs = () => {
                     <input type="email" className="email-input input" autoComplete="off" name="mail" id='mail' placeholder="Your Email" />
                     {/*<label htmlFor="mail" className="email-label">Email</label> */}
                 <div className="button-send">
-                    Send!
+                    <p>- Send! -</p>
                 </div>
 
             </div>

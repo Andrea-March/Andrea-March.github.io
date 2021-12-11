@@ -2,7 +2,7 @@ import v60 from "../static/v60/v60_ok.jpg";
 import french from "../static/french/french_press_ok.jpg";
 import cappuccino from "../static/cappuccino/cappuccino_ok.jpg";
 import chemex from "../static/v60/v60-ok2.jpg";
-import coverArticle from '../static/bar.jpg'
+import cup from '../static/cup_ok.jpg'
 
 const ArticleList = [
     {
@@ -91,7 +91,7 @@ const articleMock= {
     title: 'How To Store Your Coffee',
     body: articleBody,
     date: '2021/04/10',
-    cover: coverArticle,
+    cover: cup,
     related:[
         {
             id: 2,

@@ -32,7 +32,7 @@ const Home = () =>{
                 </div>
                 <div className="gallery-element last">
                     <p>Discover the best coffee extraction methods, to fully enjoy your cup and appreciate all the nuances of your coffee</p>
-                    <img src={espresso} onClick={goToArticles} alt=""/>
+                    <img src={espresso} onClick={goToArticles} alt="https://unsplash.com/photos/KixfBEdyp64?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
                 </div>
 
             </div>

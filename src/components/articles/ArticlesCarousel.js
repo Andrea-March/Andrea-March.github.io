@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import ArticleCard from "./article-card/ArticleCard";
 import {useNavigate} from "react-router-dom";
 import './ArticlesCarousel.css'
-import {ArticleList} from "../../mock/Articles";
+import {getList} from "../../service/retrieve";
 
 const ArticlesCarousel = () => {
     const navigate = useNavigate()
@@ -22,7 +22,7 @@ const ArticlesCarousel = () => {
     const [articleList, setArticleList] = useState([emptyArticle])
 
     useEffect(()=>{
-        setArticleList(ArticleList)
+        getList().then(setArticleList)
     },[])
 
     const handleProceed = (articleId) => {
