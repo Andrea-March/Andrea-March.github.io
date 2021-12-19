@@ -3,6 +3,7 @@
     z-index: 3;
     opacity: 1;
     transition: all 0.3s ease-in-out;
+    height: 700px;
 }
 
 .center:hover{
@@ -46,7 +47,7 @@
     padding: 3%;
     background-color: var(--primary);
     width: 74%;
-    height: 150px;
+    max-height: 150px;
 }
 
 @media screen and (max-width: 820px) {
@@ -55,6 +56,9 @@
     }
     .article-card{
         height: 400px;
+    }
+    .card-title {
+        font-size: 1.4rem;
     }
 }
 

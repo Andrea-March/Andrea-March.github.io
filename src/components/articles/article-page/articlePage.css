@@ -49,6 +49,9 @@
         padding-right: 0 !important;
         font-size: 1.2rem;
     }
+    h1 {
+        font-size: 1.4rem;
+    }
     .gif {
         width: 90%;
     }
