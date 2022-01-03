@@ -20,10 +20,7 @@ const Home = () =>{
             {/* <div className={"btn-enter"} onClick={navigateProducts} id="link-to-page">
                     <p>Lasciati avvolgere dal gusto</p>
                 </div> */}
-            {/*
-                <div className="temporary-div">Site Under Construction!</div>
-                */
-            }
+            <div className="temporary-div">Site Under Construction!</div>
             <div className="logo-write dFlex">For Coffee Lovers</div>
             <div className="gallery flex-column">
                 <div className="gallery-title">
@@ -34,7 +31,7 @@ const Home = () =>{
                     <img src={coffeeflavors} onClick={goToArticles} alt=""/>
                 </div>
                 <div className="gallery-element right-description">
-                    <p>Discover the warm taste of a single origin coffee, with intense flavors and aromas</p>
+                    <p>Discover the particularities and singular characteristics of coffees from all over the world</p>
                     <img src={coffeecup} onClick={goToArticles} alt="https://unsplash.com/photos/nBJHO6wmRWw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
                 </div>
                 <div className="gallery-element last">
