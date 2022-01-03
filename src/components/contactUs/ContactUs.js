@@ -14,7 +14,6 @@ const ContactUs = () => {
     const [showToast, setShowToast] = useState(false)
     const sendMessage = () => {
         if(message !== ""){
-            setLoading(true)
             send({"sender": name, "message": message, "date": new Date(), "mail": mail})
                 .then((res) => {
                     let mess = res.status === 201 || res.status === 200 ? thankMessage : errorMessage;
