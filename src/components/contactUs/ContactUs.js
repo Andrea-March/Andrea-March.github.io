@@ -5,20 +5,40 @@ import {send} from "../../service/retrieve";
 
 
 const ContactUs = () => {
-
+    const thankMessage = "Thank you for your precious feedback! Your opinion is very important for us!"
+    const errorMessage = "Something went wrong, please try again later!"
     const [name, setName] = useState("")
     const [mail, setMail] = useState("")
     const [message, setMessage] = useState("")
+    const [toastText, setToastText] = useState("")
+    const [showToast, setShowToast] = useState(false)
     const sendMessage = () => {
         if(message !== ""){
-            send({name: name, message: message, mail: mail}).then(()=> console.log('sent!'))
+            setLoading(true)
+            send({"sender": name, "message": message, "date": new Date(), "mail": mail})
+                .then((res) => {
+                    let mess = res.status === 201 || res.status === 200 ? thankMessage : errorMessage;
+                    setToastText(mess)
+                    notify()
+                }).catch(()=>{setToastText(errorMessage); notify()})
         }
+    }
+
+    const notify = () => {
+        setShowToast(true)
+        setTimeout(()=> {setShowToast(false)},3000)
     }
 
     return(
         <div className="contact-us">
+            {
+                showToast &&
+                    <div className="toast-message">
+                        {toastText}
+                    </div>
+            }
             <div className="contact-bar">
-                Hey There! Let's get in touch!
+                Hey There! <br/>Let's get in touch!
             </div>
             <div className="contact-form">
                     <p>
