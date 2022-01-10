@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import './articlePage.css'
 import '../../../shared/styles/SharedStyles.css'
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import GoBack from "../../../shared/components/go-back/GoBack";
 import RelatedCard from "../related/RelatedCard";
 //import {getArticle} from "../../../service/retrieve";
