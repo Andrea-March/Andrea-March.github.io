@@ -5,8 +5,9 @@ import {useNavigate} from "react-router-dom";
 import GoBack from "../../../shared/components/go-back/GoBack";
 import RelatedCard from "../related/RelatedCard";
 //import {getArticle} from "../../../service/retrieve";
-//import ReactMarkdown from "react-markdown";
-import {articleMock} from "../../../mock/Articles";
+//import {Markup} from 'interweave';
+//import {getArticle} from "../../../service/retrieve";
+import CommentSection from "../../comment-section/CommentSection";
 
 const ArticlePage = () => {
 
