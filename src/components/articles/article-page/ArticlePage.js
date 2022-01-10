@@ -8,6 +8,7 @@ import RelatedCard from "../related/RelatedCard";
 //import {Markup} from 'interweave';
 //import {getArticle} from "../../../service/retrieve";
 import CommentSection from "../../comment-section/CommentSection";
+import {articleMock} from "../../../mock/Articles";
 
 const ArticlePage = () => {
 
