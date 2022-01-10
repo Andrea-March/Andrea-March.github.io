@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import './ArticlesCarousel.css'
 //import {getList} from "../../service/retrieve";
 import {ArticleList} from "../../mock/Articles";
+import {getList} from "../../service/retrieve";
 
 const ArticlesCarousel = () => {
     const navigate = useNavigate()
@@ -14,6 +15,7 @@ const ArticlesCarousel = () => {
         title: '',
         date: '',
         thumb: '',
+        cover: '',
         imgalt: '',
         related: [{
             id: -1,
@@ -23,9 +25,12 @@ const ArticlesCarousel = () => {
 
     const [articleList, setArticleList] = useState([emptyArticle])
 
-    useEffect(()=>{
+    const setMock = () => {
         setArticleList(ArticleList)
-        //getList().then(setArticleList)
+    }
+
+    useEffect(()=>{
+        getList().then(setArticleList).catch((err)=>setMock())
     },[])
 
     const handleProceed = (articleId) => {
