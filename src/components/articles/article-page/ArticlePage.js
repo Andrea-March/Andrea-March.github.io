@@ -135,6 +135,7 @@ const ArticlePage = () => {
                     </p>
                 </div>
             </div>
+            <CommentSection comments={article.comments} />
             {
                 article.related &&
                 <div>

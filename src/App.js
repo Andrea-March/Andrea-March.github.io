@@ -12,6 +12,7 @@ import ArticlePage from "./components/articles/article-page/ArticlePage";
 import ContactUs from "./components/contactUs/ContactUs";
 import About from "./components/about/About";
 import Guides from "./components/guides/Guides";
+import ThankYou from "./components/contactUs/ThankYou";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                   <Route exact path='/guides' element={<Guides />} />
                   <Route exact path='/about' element={<About />} />
                   <Route exact path='/contacts' element={<ContactUs />} />
+                  <Route exact path='thank-you' element={<ThankYou />} />
               </Routes>
           <Footer />
           </BrowserRouter>

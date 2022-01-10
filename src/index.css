@@ -17,5 +17,17 @@ code {
 :root {
   --mobiletransition: 820px;
   --primary: grey;
-  --accent: #d4dbe0
+  --accent: #d4dbe0;
+  --navbar-height: 8.4vh;
+  --footer-height: 15vh;
+  --content-min-height: 76.6vh;
+}
+
+
+@media all and (max-height: 900px){
+  :root{
+    --navbar-height: 13vh;
+    --footer-height: 27vh;
+    --content-min-height: 60vh;
+  }
 }

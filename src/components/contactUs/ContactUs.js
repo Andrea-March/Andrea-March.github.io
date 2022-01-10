@@ -2,10 +2,13 @@ import React, {useState} from "react";
 
 import './ContactUs.css'
 import {send} from "../../service/retrieve";
+import {useNavigate} from "react-router-dom";
 
 
 const ContactUs = () => {
-    const thankMessage = "Thank you for your precious feedback! Your opinion is very important for us!"
+
+    const navigate = useNavigate()
+
     const errorMessage = "Something went wrong, please try again later!"
     const [name, setName] = useState("")
     const [mail, setMail] = useState("")
@@ -13,19 +16,25 @@ const ContactUs = () => {
     const [toastText, setToastText] = useState("")
     const [showToast, setShowToast] = useState(false)
     const sendMessage = () => {
-        if(message !== ""){
+        if(name === ""){
+            setToastText("Please enter your name!")
+            notify()
+            return
+        }else if(message ===""){
+            setToastText("Please enter a message!")
+            notify()
+            return
+        }else{
             send({"sender": name, "message": message, "date": new Date(), "mail": mail})
                 .then((res) => {
-                    let mess = res.status === 201 || res.status === 200 ? thankMessage : errorMessage;
-                    setToastText(mess)
-                    notify()
+                    navigate('/thank-you')
                 }).catch(()=>{setToastText(errorMessage); notify()})
         }
     }
 
     const notify = () => {
         setShowToast(true)
-        setTimeout(()=> {setShowToast(false)},3000)
+        setTimeout(()=> {setShowToast(false); setToastText("")},3000)
     }
 
     return(

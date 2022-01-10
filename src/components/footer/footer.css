@@ -4,6 +4,7 @@
     width: 100%;
     color: black;
     font-size: 12px;
+    height: var(--footer-height);
 }
 .footer .fa{
     width: 20px;
