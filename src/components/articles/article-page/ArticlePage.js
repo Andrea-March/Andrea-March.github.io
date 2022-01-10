@@ -38,7 +38,7 @@ const ArticlePage = () => {
         return () => {
             window.removeEventListener('scroll', scrollListener)
         }
-    },[])
+    },[id])
     if (article) {
     return (
         <div className="flex-column w-100 article-container">

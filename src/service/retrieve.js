@@ -18,10 +18,6 @@ const getArticle = (id) =>{
     return fetch(backendUrl+`/articles/${id}/`).then(handleReponse)
 }
 
-const getComments = (articleId) => {
-    return fetch(backendUrl+`/comments/${articleId}/`).then((res) => res.json()).catch(console.log)
-}
-
 
 const send = (message) =>{
     return fetch(backendUrl + '/message/',{
