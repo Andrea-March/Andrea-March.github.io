@@ -92,6 +92,18 @@ const articleMock= {
     body: articleBody,
     date: '2021/04/10',
     thumb: cup,
+    comments: [
+        {
+            user: 'Guest',
+            date: '2021-01-10',
+            message: 'This article is super dope! I was trying to use my coffee grounds to fertilize my garden and this article gave me the idea to do so. It worked brilliantly, thank you :)'
+        },
+        {
+            user: 'Guest_2',
+            date: '2021-01-09',
+            message: 'This article is super dope! I was trying to use my coffee grounds to fertilize my garden and this article gave me the idea to do so. It worked brilliantly, thank you :)'
+        }
+    ],
     related:[
         {
             id: 2,
