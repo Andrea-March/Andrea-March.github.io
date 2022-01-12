@@ -1,4 +1,4 @@
-const backendUrl = 'http://206.189.52.104:8000/'
+const backendUrl = 'http://206.189.52.104:8000'
 
 
 const handleReponse = (res) => {
