@@ -1,4 +1,4 @@
-const backendUrl = 'http://0.0.0.0:8000'
+const backendUrl = 'http://206.189.52.104:8000/'
 
 
 const handleReponse = (res) => {
@@ -31,4 +31,8 @@ const send = (message) =>{
     })
 }
 
-export {getList, getArticle, send}
+const sendComment = (articleId, comment) => {
+
+}
+
+export {getList, getArticle, send, sendComment}
