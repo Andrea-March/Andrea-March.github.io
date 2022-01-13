@@ -1,5 +1,5 @@
-//const backendUrl = 'https://coffee-backend-jr55f.ondigitalocean.app'
-const backendUrl = 'http://0.0.0.0:8000'
+const backendUrl = 'https://coffee-backend-jr55f.ondigitalocean.app'
+//const backendUrl = 'http://0.0.0.0:8000'
 
 const handleReponse = (res) => {
     if(!res.ok){
