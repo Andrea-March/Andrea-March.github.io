@@ -5,7 +5,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import GoBack from "../../../shared/components/go-back/GoBack";
 import RelatedCard from "../related/RelatedCard";
 import {Markup} from 'interweave';
-import {getArticle} from "../../../service/retrieve";
+import {getArticle, sendReaction} from "../../../service/retrieve";
 import CommentSection from "../../comment-section/CommentSection";
 import {articleMock} from "../../../mock/Articles";
 
@@ -20,6 +20,14 @@ const ArticlePage = () => {
 
     const goBack = () => {
         navigation("/articles")
+    }
+
+    const react = (reaction) => {
+        sendReaction(reaction, article.id).then(()=> {
+            window.location.reload(false);
+        }).catch(()=>{
+            window.location.reload(false);
+        })
     }
 
 
@@ -50,11 +58,29 @@ const ArticlePage = () => {
                     <GoBack onClick={goBack} text={"All Articles"}/>
                     <h1>{article.title}</h1>
                 </div>
-                <div className="pr-10 w-60 art-body">
-                  <Markup content={article.body} className="markup"/>
+                <div className="body-wrapper">
+                    <div className="reactions-side">
+                        <div className="likes-side">
+                            <i className="fa fa-thumbs-up fa-2x fa-icon-article" onClick={() => {react(0)}}/>
+                            <div className="counts-side">{article.likes}</div>
+                        </div>
+                        <div className="likes-side">
+                            <i className="fa fa-thumbs-down fa-2x fa-icon-article" onClick={() => {react(1)}}/>
+                            <div className="counts-side">{article.dislikes}</div>
+                        </div>
+                        <div className="likes-side">
+                            <i className="fa fa-heart fa-2x fa-icon-article" onClick={() => {react(2)}}/>
+                            <div className="counts-side">{article.hearts}</div>
+                        </div>
+
+                    </div>
+                    <div className="p-10 w-60 art-body">
+                        <Markup content={article.body} className="markup"/>
+                    </div>
+
                 </div>
             </div>
-            <CommentSection comments={article.comments} />
+            <CommentSection comments={article.comments} articleId={article.id} likes={article.likes} dislikes={article.dislikes} hearts={article.hearts}/>
             {
                 article.related &&
                 <div>
@@ -65,7 +91,7 @@ const ArticlePage = () => {
                     <div className="flex-row flex-wrap">
                         {article?.related.map((related) => {
                             return (
-                                <RelatedCard related={related}/>
+                                <RelatedCard related={related} key={related.id}/>
                             )
                         })}
                     </div>

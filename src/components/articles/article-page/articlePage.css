@@ -22,6 +22,12 @@
     will-change: -webkit-filter, filter, transform; */
 }
 
+.art-body{
+    margin: 10px 0 10px 2%;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
 .art-body h4{
     font-size: 2rem;
 
@@ -38,6 +44,43 @@
     font-size: 1.5rem;
 }
 
+.body-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.reactions-side {
+    width: 10%;
+    height: 100%;
+    margin-left: 5%;
+    margin-top: 10px;
+    top: 10%;
+    border: 2px grey solid;
+    border-radius: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fa-icon-article {
+    color: #6CB4EE;
+}
+
+.likes-side {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.likes-side div {
+    margin: 20% 0 0 22%;
+    text-align: center;
+}
 
 #center-span{
     display: flex;
@@ -47,17 +90,22 @@
     margin-left: 10%;
     font-style: italic;
 }
+
 @media all and (max-width: 820px){
     .art-body{
         width: 95% !important;
         padding-right: 0 !important;
         font-size: 1.2rem;
+        border: none;
     }
     h1 {
         font-size: 1.4rem;
     }
     .gif {
         width: 90%;
+    }
+    .reactions-side{
+        display: none;
     }
 }
 
@@ -70,8 +118,9 @@
 }
 
 .markup {
+
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0 0 0 0;
     padding: 0;
 }

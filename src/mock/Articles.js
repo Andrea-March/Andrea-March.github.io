@@ -127,13 +127,18 @@ const articleMock= {
     date: '2021/04/10',
     thumb: cup,
     cover:cup,
+    likes: 10,
+    dislikes: 1,
+    hearts: 5,
     comments: [
         {
+            id: 1,
             user: 'Guest',
             date: '2021-01-10',
             message: 'This article is super dope! I was trying to use my coffee grounds to fertilize my garden and this article gave me the idea to do so. It worked brilliantly, thank you :)'
         },
         {
+            id: 2,
             user: 'Guest_2',
             date: '2021-01-09',
             message: 'This article is super dope! I was trying to use my coffee grounds to fertilize my garden and this article gave me the idea to do so. It worked brilliantly, thank you :)'

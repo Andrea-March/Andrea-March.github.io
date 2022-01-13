@@ -60,7 +60,7 @@ const ContactUs = () => {
                     <p>
                         and this is my message for you:
                     </p>
-                <textarea placeholder="Be Nice :)" className="message-text" required maxLength={500} onChange={(e) =>{setMessage(e.target.value);console.log(message)}}/>
+                <textarea placeholder="Be Nice :)" className="message-text" required maxLength={500} onChange={(e) =>{setMessage(e.target.value)}}/>
                 <p className="max-length">max length: 500 words</p>
                 <p>
                     I can be contacted back at my email address:

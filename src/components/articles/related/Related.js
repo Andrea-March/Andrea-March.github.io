@@ -23,7 +23,7 @@ const Related = ({article}) => {
         <div className="flex-row flex-wrap">
             { relatedList.map((related) => {
                 return (
-                  <RelatedCard related={related} />
+                  <RelatedCard related={related} key={related.id}/>
                 )
             }) }
         </div>
