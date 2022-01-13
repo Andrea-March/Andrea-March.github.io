@@ -1,4 +1,4 @@
-const backendUrl = 'http://206.189.52.104:8000'
+const backendUrl = 'https://coffee-backend-jr55f.ondigitalocean.app'
 
 
 const handleReponse = (res) => {
