@@ -43,7 +43,7 @@ function App() {
             netlifyIdentity.close()
         })
         netlifyIdentity.on('close', () => {});
-    },[])
+    },[user],)
   return (
           <BrowserRouter>
               <ScrollToTop />
