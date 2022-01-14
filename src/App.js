@@ -21,7 +21,6 @@ function App() {
     const [user, setUser] = useState(undefined)
     useEffect(()=>{
         netlifyIdentity.init({
-            container: '#netlify-modal',
             locale: 'en' // defaults to 'en'
         });
         netlifyIdentity.on('init', (us)=>{
