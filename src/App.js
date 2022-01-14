@@ -14,12 +14,41 @@ import About from "./components/about/About";
 import Guides from "./components/guides/Guides";
 import ThankYou from "./components/contactUs/ThankYou";
 import PageNotFound from "./shared/components/page-not-found/PageNotFound";
+import netlifyIdentity from 'netlify-identity-widget'
+import {useEffect, useState} from "react";
 
 function App() {
+    const [user, setUser] = useState(undefined)
+    useEffect(()=>{
+        netlifyIdentity.init({
+            container: '#netlify-modal',
+            locale: 'en' // defaults to 'en'
+        });
+        netlifyIdentity.on('init', (us)=>{
+            if(us){
+                console.log(user)
+                setUser(us)
+            }
+        })
+        netlifyIdentity.on('login', (us)=>{
+            if(us){
+                console.log(user)
+                setUser(us)
+                window.location.reload(false)
+            }
+        })
+        netlifyIdentity.on('logout', ()=>{
+            setUser(undefined)
+            window.location.reload(false)
+            netlifyIdentity.close()
+        })
+        netlifyIdentity.on('close', () => {});
+    },[])
   return (
           <BrowserRouter>
               <ScrollToTop />
           <Header />
+              <div  id="netlify-modal" />
               <Routes>
                   <Route exact path='/' element={<Home />} />
                   <Route path='/articles/:id' element={<ArticlePage />} />

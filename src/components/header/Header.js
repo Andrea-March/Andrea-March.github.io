@@ -2,15 +2,28 @@ import React, {useState} from "react";
 import './header.css'
 import logo from '../../static/coffee2.webp'
 import {Link} from "react-router-dom";
+import netlifyIdentity from 'netlify-identity-widget'
 
 const Header = () =>{
     const [click, setClick] = useState(false);
+
     const handleClick = () => {
         setClick(!click);
     };
     const closeMobileMenu = () => {
         setClick(false);
     };
+
+    const openNetlify = () => {
+        netlifyIdentity.open()
+        if(click){
+            setClick(false)
+        }
+    }
+
+    //useEffect(()=>{console.log("HERE")},[netlifyIdentity.currentUser()])
+
+    let signText = netlifyIdentity.currentUser() ? 'Log Out' : 'Sign in / Sign up'
     return(
         <div className="navbar">
             <div className="navbar-container">
@@ -41,6 +54,9 @@ const Header = () =>{
                         </li>
                         <li className="nav-item">
                             <Link to="/contacts" className="nav-links" onClick={closeMobileMenu}>Contact</Link>
+                        </li>
+                        <li className="nav-item" >
+                            <div className="nav-links signin" onClick={() =>{openNetlify()}}> {signText}</div>
                         </li>
                     </ul>
                 </nav>

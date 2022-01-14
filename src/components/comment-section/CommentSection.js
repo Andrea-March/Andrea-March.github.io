@@ -2,10 +2,13 @@ import Comment from "./Comment";
 import './commentSection.css'
 import React, {useState} from "react";
 import {sendComment, sendReaction} from "../../service/retrieve";
+import netlifyIdentity from "netlify-identity-widget";
 
 const CommentSection = ({comments, likes, dislikes, hearts, articleId}) => {
 
     const [comment, setComment] = useState("")
+
+
 
     const beTheFirstDiv = () => {
         if(!comments.length){
@@ -18,13 +21,18 @@ const CommentSection = ({comments, likes, dislikes, hearts, articleId}) => {
     }
 
     const sendYourComment = () => {
-        sendComment(articleId, comment).catch((err) => {
-            window.location.reload(false);
-        }).then(
-            (res) => {
+        if(netlifyIdentity.currentUser()){
+            sendComment(articleId, comment, netlifyIdentity.currentUser().user_metadata.full_name).catch((err) => {
                 window.location.reload(false);
-            }
-        )
+            }).then(
+                (res) => {
+                    window.location.reload(false);
+                }
+            )
+        }else {
+            netlifyIdentity.open()
+        }
+
     }
 
     const react = (reaction) => {

@@ -47,8 +47,8 @@ const sendReaction = (reaction, articleId) => {
     })
 }
 
-const sendComment = (articleId, comment) => {
-    let body = {"message": comment, "post": articleId}
+const sendComment = (articleId, comment, netlifyUser) => {
+    let body = {"message": comment, "post": articleId, "user": netlifyUser}
     return fetch(backendUrl + '/comment/',{
         method: 'POST',
         credentials: 'include',

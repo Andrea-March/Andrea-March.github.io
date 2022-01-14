@@ -48,7 +48,7 @@
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(6, auto);
     grid-gap: 10px;
     list-style: none;
     text-align: center;
@@ -93,6 +93,11 @@
 
 .menu-icon {
     display: none;
+}
+
+.signin{
+    background-color: #6CB4EE;
+    height: 90%;
 }
 
 
@@ -168,6 +173,11 @@
     .fa-times {
         color: #fff;
         font-size: 2rem;
+    }
+
+    .signin{
+        background: #242222;
+        color: var(--social)
     }
 
 }
