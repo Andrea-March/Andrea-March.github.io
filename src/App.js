@@ -13,6 +13,7 @@ import ContactUs from "./components/contactUs/ContactUs";
 import About from "./components/about/About";
 import Guides from "./components/guides/Guides";
 import ThankYou from "./components/contactUs/ThankYou";
+import PageNotFound from "./shared/components/page-not-found/PageNotFound";
 
 function App() {
   return (
@@ -20,8 +21,8 @@ function App() {
               <ScrollToTop />
           <Header />
               <Routes>
-                  <Route path='/articles/:id' element={<ArticlePage />} />
                   <Route exact path='/' element={<Home />} />
+                  <Route path='/articles/:id' element={<ArticlePage />} />
                   <Route exact path='/products' element={<ProductsHome />} />
                   <Route exact path='/products/powders' element={<Powders />} />
                   <Route exact path='/products/machines' element={<Machines />} />
@@ -30,6 +31,7 @@ function App() {
                   <Route exact path='/about' element={<About />} />
                   <Route exact path='/contacts' element={<ContactUs />} />
                   <Route exact path='thank-you' element={<ThankYou />} />
+                  <Route exact path='*' element={<PageNotFound />} />
               </Routes>
           <Footer />
           </BrowserRouter>
