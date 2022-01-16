@@ -72,13 +72,36 @@ const ArticlePage = () => {
                             <i className="fa fa-heart fa-2x fa-icon-article" onClick={() => {react(2)}}/>
                             <div className="counts-side">{article.hearts}</div>
                         </div>
-
                     </div>
                     <div className="p-10 w-60 art-body">
                         <Markup content={article.body} className="markup"/>
                     </div>
-
+                    <div className="adsdesktop">
+                        <script async
+                                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3090563077320193"
+                                crossOrigin="anonymous"></script>
+                        <ins className="adsbygoogle"
+                             style={{display:"inline-block",width:"300px",height:"250px"}}
+                             data-ad-client="ca-pub-3090563077320193"
+                             data-ad-slot="5340879486"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
                 </div>
+                <div className="advmobile">
+                    <script async
+                            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3090563077320193"
+                            crossOrigin="anonymous"></script>
+                    <ins className="adsbygoogle"
+                         style={{display:"inline-block",width:"300px",height:"250px"}}
+                         data-ad-client="ca-pub-3090563077320193"
+                         data-ad-slot="5340879486"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
             </div>
             <CommentSection comments={article.comments} articleId={article.id} likes={article.likes} dislikes={article.dislikes} hearts={article.hearts}/>
             {

@@ -91,6 +91,27 @@
     font-style: italic;
 }
 
+.adv {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 150px;
+}
+
+.advmobile {
+    display: none;
+    width: 300px;
+    height: 250px;
+}
+
+.adsdesktop {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-right:10px;
+    margin-left: 10px;
+    margin-top:50px;
+}
+
 @media all and (max-width: 820px){
     .art-body{
         width: 95% !important;
@@ -106,6 +127,14 @@
     }
     .reactions-side{
         display: none;
+    }
+
+    .adsdesktop{
+        display: none;
+    }
+
+    .advmobile {
+        display: flex;
     }
 }
 
