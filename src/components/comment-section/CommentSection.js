@@ -3,6 +3,7 @@ import './commentSection.css'
 import React, {useState} from "react";
 import {sendComment, sendReaction} from "../../service/retrieve";
 import netlifyIdentity from "netlify-identity-widget";
+import Button from "../buttons/Button";
 
 const CommentSection = ({comments, likes, dislikes, hearts, articleId}) => {
 
@@ -70,9 +71,7 @@ const CommentSection = ({comments, likes, dislikes, hearts, articleId}) => {
                 }
             <div className="own-comment">
                 <textarea placeholder="Write your comment" className="comment-text" required maxLength={500} onChange={(e) =>{setComment(e.target.value)}}/>
-                <div className="btn-send" onClick={() => sendYourComment()}>
-                    <p>- Send! -</p>
-                </div>
+                <Button click={sendYourComment} text={"Send!"}/>
             </div>
             {
                 comments.map((comment) => {

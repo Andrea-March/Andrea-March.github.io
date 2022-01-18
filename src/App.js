@@ -18,7 +18,9 @@ import netlifyIdentity from 'netlify-identity-widget'
 import {useEffect, useState} from "react";
 
 function App() {
+
     const [user, setUser] = useState(undefined)
+
     useEffect(()=>{
         netlifyIdentity.init({
             locale: 'en' // defaults to 'en'
@@ -30,11 +32,9 @@ function App() {
             }
         })
         netlifyIdentity.on('login', (us)=>{
-            if(us){
-                console.log(user)
-                setUser(us)
-                window.location.reload(false)
-            }
+            setUser(us)
+            netlifyIdentity.close()
+            window.location.reload(false)
         })
         netlifyIdentity.on('logout', ()=>{
             setUser(undefined)
@@ -42,12 +42,12 @@ function App() {
             netlifyIdentity.close()
         })
         netlifyIdentity.on('close', () => {});
-    },[user],)
+    },[netlifyIdentity.currentUser()])
+
   return (
           <BrowserRouter>
               <ScrollToTop />
           <Header />
-              <div  id="netlify-modal" />
               <Routes>
                   <Route exact path='/' element={<Home />} />
                   <Route path='/articles/:id' element={<ArticlePage />} />

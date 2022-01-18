@@ -1,0 +1,27 @@
+.button-send {
+    color: var(--accent);
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 12%;
+    height: 70px;
+    margin: 5%;
+    border-bottom: 1px grey solid;
+    border-top: 1px grey solid;
+    border-radius: 5px;
+}
+
+.button-send:hover{
+    cursor: pointer;
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+@media all and (max-width: 820px) {
+    .button-send {
+        border-radius: 10px;
+        width: 50%;
+    }
+}
