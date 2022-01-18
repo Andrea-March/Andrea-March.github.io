@@ -104,7 +104,8 @@
 }
 
 .adsdesktop {
-    display: flex;
+    /*display: flex; uncomment to get ad space*/
+    display: none;
     flex-direction: column;
     width: 300px;
     margin-right:10px;
@@ -135,7 +136,8 @@
     }
 
     .advmobile {
-        display: flex;
+        /*display: flex; uncomment to get ad space*/
+        display: none;
     }
 }
 
