@@ -42,7 +42,7 @@ function App() {
             netlifyIdentity.close()
         })
         netlifyIdentity.on('close', () => {});
-    },[netlifyIdentity.currentUser()])
+    },[user])
 
   return (
           <BrowserRouter>

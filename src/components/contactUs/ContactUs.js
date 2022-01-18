@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 
 import './ContactUs.css'
 import {send} from "../../service/retrieve";
@@ -37,16 +37,8 @@ const ContactUs = () => {
         setTimeout(()=> {setShowToast(false); setToastText("")},3000)
     }
 
-    useEffect(()=>{
-        let defaultName = ""
-        let defaultMail = ""
-        if(netlifyIdentity.currentUser()){
-            defaultName = netlifyIdentity.currentUser().user_metadata.full_name
-            defaultMail = netlifyIdentity.currentUser().email
-        }
-        setName(defaultName)
-        setMail(defaultMail)
-    },[netlifyIdentity.currentUser()])
+    let defaultName = netlifyIdentity.currentUser() ? netlifyIdentity.currentUser().user_metadata.full_name : ""
+    let defaultMail = netlifyIdentity.currentUser() ? netlifyIdentity.currentUser().email : ""
     return(
         <div className="contact-us">
             {
@@ -69,7 +61,7 @@ const ContactUs = () => {
                                name="name"
                                id='name'
                                placeholder="Your Name"
-                               defaultValue={name}
+                               defaultValue={defaultName}
                                required onChange={(e) => {setName(e.target.value)}}
                         />
                         {/*<label htmlFor="name" id="name-label" className="name-label">Name</label> */}
@@ -93,7 +85,7 @@ const ContactUs = () => {
                            id='mail'
                            placeholder="Your Email"
                            onChange={(e)=>setMail(e.target.value)}
-                           defaultValue={mail}
+                           defaultValue={defaultMail}
                     />
                 <Button click={sendMessage} text={"Send!"}/>
 

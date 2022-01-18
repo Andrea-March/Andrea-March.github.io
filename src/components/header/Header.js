@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import './header.css'
 import logo from '../../static/coffee2.webp'
 import {Link} from "react-router-dom";
@@ -6,7 +6,6 @@ import netlifyIdentity from 'netlify-identity-widget'
 
 const Header = () =>{
     const [click, setClick] = useState(false);
-    const [signText, setSignText] = useState("")
     const handleClick = () => {
         setClick(!click);
     };
@@ -21,11 +20,7 @@ const Header = () =>{
         }
     }
 
-    //useEffect(()=>{console.log("HERE")},[netlifyIdentity.currentUser()])
-    useEffect(()=>{
-        let text = netlifyIdentity.currentUser() ? 'Log Out' : 'Sign in / Sign up'
-        setSignText(text)
-    },[netlifyIdentity.currentUser()])
+    let signText = netlifyIdentity.currentUser() ? 'Log Out' : 'Sign in / Sign up'
 
     return(
         <div className="navbar">
