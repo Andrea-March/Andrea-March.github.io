@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './header.css'
-import logo from '../../static/coffee2.webp'
+import logo from '../../static/logo_new.webp'
 import {Link} from "react-router-dom";
 import netlifyIdentity from 'netlify-identity-widget'
 
