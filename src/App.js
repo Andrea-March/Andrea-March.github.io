@@ -15,34 +15,24 @@ import Guides from "./components/guides/Guides";
 import ThankYou from "./components/contactUs/ThankYou";
 import PageNotFound from "./shared/components/page-not-found/PageNotFound";
 import netlifyIdentity from 'netlify-identity-widget'
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
+import {loginUser, logoutUser} from "./lib/identityAction";
 
 function App() {
 
-    const [user, setUser] = useState(undefined)
-
     useEffect(()=>{
-        netlifyIdentity.init({
-            locale: 'en' // defaults to 'en'
+        netlifyIdentity.on("login", (user) => {
+            loginUser()
+            netlifyIdentity.close()
+            window.location.reload(false)
         });
-        netlifyIdentity.on('init', (us)=>{
-            if(us){
-                console.log(user)
-                setUser(us)
-            }
-        })
-        netlifyIdentity.on('login', (us)=>{
-            setUser(us)
+        netlifyIdentity.on("logout", (user) => {
+            logoutUser()
             netlifyIdentity.close()
             window.location.reload(false)
-        })
-        netlifyIdentity.on('logout', ()=>{
-            setUser(undefined)
-            window.location.reload(false)
-            netlifyIdentity.close()
-        })
+        });
         netlifyIdentity.on('close', () => {});
-    },[user])
+    },[])
 
   return (
           <BrowserRouter>
@@ -64,9 +54,6 @@ function App() {
           <Footer />
           </BrowserRouter>
 
-      /*
-
-      */
   );
 }
 

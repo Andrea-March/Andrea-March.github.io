@@ -3,7 +3,6 @@ import './articlePage.css'
 import '../../../shared/styles/SharedStyles.css'
 import {useNavigate, useParams} from "react-router-dom";
 import GoBack from "../../../shared/components/go-back/GoBack";
-import RelatedCard from "../related/RelatedCard";
 import {Markup} from 'interweave';
 import {getArticle, sendReaction} from "../../../service/retrieve";
 import CommentSection from "../../comment-section/CommentSection";
@@ -104,21 +103,23 @@ const ArticlePage = () => {
 
             </div>
             <CommentSection comments={article.comments} articleId={article.id} likes={article.likes} dislikes={article.dislikes} hearts={article.hearts}/>
-            {
+            {/*
                 article.related &&
                 <div>
                     <div className="sticky-title">
                         <GoBack onClick={goBack} text={"All Articles"}/>
                         <h1>What's next?</h1>
                     </div>
-                    <div className="flex-row flex-wrap">
-                        {article?.related.map((related) => {
-                            return (
-                                <RelatedCard related={related} key={related.id}/>
-                            )
-                        })}
-                    </div>
+                        <div className="flex-row flex-wrap">
+                            {article?.related.map((related) => {
+                                return (
+                                    <RelatedCard related={related} key={related.id}/>
+                                )
+                            })}
+                        </div>
+
                 </div>
+                */
             }
 
         </div>

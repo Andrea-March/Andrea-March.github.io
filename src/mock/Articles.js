@@ -11,25 +11,29 @@ const ArticleList = [
         date: '2021.11.26',
         thumb: v60,
         alt: 'https://unsplash.com/photos/R1zLaRmi-DE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
-        related: [2,3,4]
+        related: [2,3,4],
+        trending: true
     },{
         id: 2,
         title: 'The Perfect Frech Press',
         date: '2021.11.26',
         thumb: french,
-        related: [1,3,4]
+        related: [1,3,4],
+        trending: true
     },{
         id: 3,
         title: 'How to make cappuccino at home',
         date: '2021.11.26',
         thumb: cappuccino,
-        related: [2,1,4]
+        related: [2,1,4],
+        trending: true
     },{
         id: 4,
         title: 'The secret to a tasty Chemex',
         date: '2021.12.02',
         thumb: chemex,
-        related: [2,3,1]
+        related: [2,3,1],
+        trending: true
     }
 ]
 
@@ -161,7 +165,8 @@ const articleMock= {
             thumb: chemex,
         }
 
-    ]
+    ],
+    trending: true
 }
 
 export {ArticleList, articleMock};
