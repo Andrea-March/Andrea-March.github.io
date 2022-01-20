@@ -113,6 +113,22 @@
     margin-top:50px;
 }
 
+.amzn-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.amz-links-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 90%;
+
+}
+
 @media all and (max-width: 820px){
     .art-body{
         width: 92% !important;

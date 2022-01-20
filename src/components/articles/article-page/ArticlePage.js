@@ -13,7 +13,7 @@ const ArticlePage = ({setLoading}) => {
 
     const { id } = useParams();
     const navigation = useNavigate()
-
+    const amznLink = "https://rcm-eu.amazon-adsystem.com/e/cm?ref=tf_til&t=coffeesite-21&m=amazon&o=29&p=8&l=as1&IS1=1&asins=B088FWM1XR&linkId=911b93feb167d000c78531ce94393711&bc1=ffffff&amp;lt1=_blank&fc1=333333&lc1=d4dbe0&bg1=ffffff&f=ifr"
 
     const [article, setArticle] = useState(undefined)
 
@@ -100,6 +100,14 @@ const ArticlePage = ({setLoading}) => {
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
+                </div>
+                <div className="amzn-links">
+                    <div className="amz-links-title">Wanna try it yourself? Check out this product!</div>
+                <iframe style={{width:"250px",height:"250px"}} marginWidth="0" marginHeight="0" scrolling="no"
+                        frameBorder="0"
+                        title="amzon-link"
+                        src={amznLink}>
+                </iframe>
                 </div>
 
             </div>
