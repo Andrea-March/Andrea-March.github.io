@@ -8,7 +8,7 @@ import {getArticle, sendReaction} from "../../../service/retrieve";
 import CommentSection from "../../comment-section/CommentSection";
 import {articleMock} from "../../../mock/Articles";
 
-const ArticlePage = () => {
+const ArticlePage = ({setLoading}) => {
 
 
     const { id } = useParams();
@@ -38,6 +38,7 @@ const ArticlePage = () => {
     }
 
     useEffect(()=>{
+        setLoading(true)
         window.addEventListener('scroll', scrollListener)
         getArticle(id).then(setArticle).catch(() => {
             setArticle(articleMock)
@@ -48,7 +49,7 @@ const ArticlePage = () => {
     },[id])
     if (article) {
     return (
-        <div className="flex-column w-100 article-container">
+        <div className="flex-column w-100 article-container" onLoad={()=>setLoading(false)}>
             <div className="zoom-article-cover">
                 <img id="article-cover-image" src={article.cover} alt={article.imgalt}/>
             </div>

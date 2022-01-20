@@ -5,7 +5,7 @@ import Trending from "./trending/Trending";
 import {ArticleList} from "../../mock/Articles";
 import {getList} from "../../service/retrieve";
 
-const Articles = () => {
+const Articles = ({setLoading}) => {
 
     const emptyArticle = {
         id: 0,
@@ -28,12 +28,12 @@ const Articles = () => {
     }
 
     useEffect(()=>{
+        setLoading(true)
         getList().then(setArticleList).catch((err)=>setMock())
-
     },[])
 
     return(
-        <div className="flex-column">
+        <div className="flex-column" onLoad={()=>setLoading(false)}>
           <ArticlesCarousel articles={articleList.filter((el) => el.trending)}/>
             <div className="trending">
                 <div className="trending-title">
