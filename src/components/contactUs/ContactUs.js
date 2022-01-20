@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import '../../shared/styles/SharedStyles.css'
 import './ContactUs.css'
 import {send} from "../../service/retrieve";
 import {useNavigate} from "react-router-dom";
@@ -40,23 +40,23 @@ const ContactUs = () => {
     let defaultName = netlifyIdentity.currentUser() ? netlifyIdentity.currentUser().user_metadata.full_name : ""
     let defaultMail = netlifyIdentity.currentUser() ? netlifyIdentity.currentUser().email : ""
     return(
-        <div className="contact-us">
+        <div className="w-100 flex-column bg-acc">
             {
                 showToast &&
-                    <div className="toast-message">
+                    <div className="toast-message text-center flex-row">
                         {toastText}
                     </div>
             }
-            <div className="contact-bar">
+            <div className="contact-bar w-100 text-center flex-row">
                 Hey There! <br/>Let's get in touch!
             </div>
-            <div className="contact-form">
+            <div className="contact-form flex-column">
                     <p>
                         Hi there! I'm
                     </p>
                     <div className="form-group">
                         <input type="input"
-                               className="name-input input"
+                               className="name-input input color-primary"
                                autoComplete="off"
                                name="name"
                                id='name'
@@ -70,7 +70,7 @@ const ContactUs = () => {
                         and this is my message for you:
                     </p>
                 <textarea placeholder="Be Nice :)"
-                          className="message-text"
+                          className="message-text bg-acc"
                           required maxLength={500}
                           onChange={(e) =>{setMessage(e.target.value)}}
                 />
@@ -79,7 +79,7 @@ const ContactUs = () => {
                     I can be contacted back at my email address:
                 </p>
                     <input type="email"
-                           className="email-input input"
+                           className="email-input input color-primary"
                            autoComplete="off"
                            name="mail"
                            id='mail'

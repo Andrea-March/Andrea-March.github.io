@@ -1,6 +1,5 @@
 .shortcut-images{
     width: 100%;
-    background-color: var(--accent);
     height: 600px;
     justify-content: space-around;
     display: flex;

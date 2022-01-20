@@ -4,7 +4,7 @@ import './Button.css'
 const Button = ({click, text}) => {
 
     return (
-        <div className="button-send" onClick={() => click()}>
+        <div className="button-send flex-row" onClick={() => click()}>
             <p>- {text} -</p>
         </div>
     )

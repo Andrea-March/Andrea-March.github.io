@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import './articles.css'
 import ArticlesCarousel from "./ArticlesCarousel";
-import Trending from "./trending/Trending";
 import {ArticleList} from "../../mock/Articles";
-import {getList} from "../../service/retrieve";
+import {getList, getTrending} from "../../service/retrieve";
+import AllArticles from "./trending/AllArticles";
 
 const Articles = ({setLoading}) => {
 
@@ -22,9 +22,10 @@ const Articles = ({setLoading}) => {
     }
 
     const [articleList, setArticleList] = useState([emptyArticle])
-
+    const [trendingList, setTrendingList] = useState([emptyArticle])
     const setMock = () => {
         setArticleList(ArticleList)
+        setTrendingList(ArticleList)
     }
 
     useEffect(()=>{
@@ -32,16 +33,19 @@ const Articles = ({setLoading}) => {
         getList()
             .then(setArticleList)
             .catch((err)=>setMock())
+        getTrending()
+            .then(setTrendingList)
+            .catch((err) => {})
     },[])
 
     return(
         <div className="flex-column" onLoad={()=>setLoading(false)}>
-          <ArticlesCarousel articles={articleList.filter((el) => el.trending)}/>
+          <ArticlesCarousel articles={trendingList}/>
             <div className="trending">
                 <div className="trending-title">
                     <h1>All Articles</h1>
                 </div>
-                <Trending articles={articleList}/>
+                <AllArticles articles={articleList}/>
             </div>
             {/*
              <div className="shortcut-images">

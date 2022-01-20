@@ -1,5 +1,6 @@
 import React from 'react'
 import './ContactUs.css'
+import '../../shared/styles/SharedStyles.css'
 import {useNavigate} from "react-router-dom";
 import netlifyIdentity from "netlify-identity-widget";
 import Button from "../buttons/Button";
@@ -18,9 +19,9 @@ const ThankYou = () => {
     }
 
     return(
-        <div className="thanks-div">
+        <div className="thanks-div text-center flex-column bg-acc">
             {thankText}
-            <Button click={goBackHome} text={"Home"} className="back-home-btn"/>
+            <Button click={goBackHome} text={"Home"} />
         </div>
     )
 }

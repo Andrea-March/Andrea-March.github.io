@@ -14,6 +14,10 @@ const getList =  () => {
     return fetch(backendUrl+'/article-card/').then(handleReponse)
 }
 
+const getTrending = () => {
+    return fetch(backendUrl+'/article-card/?trending=true').then(handleReponse)
+}
+
 const getArticle = (id) =>{
     return fetch(backendUrl+`/articles/${id}/`).then(handleReponse)
 }
@@ -61,4 +65,4 @@ const sendComment = (articleId, comment, netlifyUser) => {
 
 }
 
-export {getList, getArticle, send, sendComment, sendReaction}
+export {getList, getArticle, send, sendComment, sendReaction, getTrending}

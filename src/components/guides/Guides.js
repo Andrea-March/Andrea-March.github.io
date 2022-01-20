@@ -1,5 +1,5 @@
 import React from "react";
-import Trending from "../articles/trending/Trending";
+import AllArticles from "../articles/trending/AllArticles";
 import './guides.css'
 
 const Guides = () => {
@@ -10,7 +10,7 @@ const Guides = () => {
                     <div className="guides-title">
                         <h1>All guides</h1>
                     </div>
-                    <Trending />
+                    <AllArticles />
                 </div>
             </div>
     )

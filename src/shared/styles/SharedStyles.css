@@ -36,20 +36,25 @@
     flex-wrap: wrap;
 }
 
+.bg-acc {
+    background-color: var(--accent);
+}
+
+.color-primary {
+    color: var(--primary);
+}
+
+.text-center {
+    text-align: center;
+}
+
 .w-100 {
     width: 100%;
 }
 
-.w-80 {
-    width: 80%;
-}
 
 .w-60 {
     width: 60%;
-}
-
-.fs-13 {
-    font-size: 1.3rem;
 }
 
 .fs-15 {

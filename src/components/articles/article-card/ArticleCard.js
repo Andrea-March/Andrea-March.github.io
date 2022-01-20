@@ -1,10 +1,10 @@
 import React from "react";
 import './ArticleCard.css'
 
-const ArticleCard = ({article, position, onClick}) => {
+const ArticleCard = ({article, position, preview, onClick}) => {
 
     return(
-        <div className={`article-card flex-column ${position}`} onClick={() => onClick(article.id)}>
+        <div className={`article-card flex-column ${position} ${preview}`} onClick={() => onClick(article.id)}>
             <div className="image-wrapper">
                 <img src={article.thumb} alt={article.imgalt || ''}/>
             </div>
@@ -12,6 +12,12 @@ const ArticleCard = ({article, position, onClick}) => {
                 <div className="card-title">{article.title}</div>
                 <div className="card-date">{article.date}</div>
             </div>
+            {preview &&
+            <div className="article-preview">
+                {article.preview}
+                <p className="read-more">Read More!</p>
+            </div>
+            }
         </div>
     )
 
