@@ -105,6 +105,7 @@ const ArticlePage = ({setLoading}) => {
                     <div className="amz-links-title">Wanna try it yourself? Check out this product!</div>
                     <iframe style={{width:"250px",height:"250px"}} marginWidth="0" marginHeight="0" scrolling="no"
                             frameBorder="0"
+                            title="amzn-link"
                             src={amznLink}>
                     </iframe>
                 </div>
