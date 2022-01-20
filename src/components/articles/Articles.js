@@ -36,7 +36,7 @@ const Articles = ({setLoading}) => {
         getTrending()
             .then(setTrendingList)
             .catch((err) => {})
-    },[])
+    },[setLoading])
 
     return(
         <div className="flex-column" onLoad={()=>setLoading(false)}>

@@ -6,7 +6,7 @@ const Loader = ({loading}) => {
     console.log(loading)
     return  loading?
         (<div className="loader-div">
-            <img src={logo} className="spinner"/>
+            <img src={logo} alt="loader" className="spinner"/>
         </div>)
         :
         (null)

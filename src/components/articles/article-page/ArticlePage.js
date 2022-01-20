@@ -46,7 +46,7 @@ const ArticlePage = ({setLoading}) => {
         return () => {
             window.removeEventListener('scroll', scrollListener)
         }
-    },[id])
+    },[id, setLoading])
     if (article) {
     return (
         <div className="flex-column w-100 article-container" onLoad={()=>setLoading(false)}>

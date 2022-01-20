@@ -14,7 +14,7 @@ const About = ({setLoading}) => {
 
     useEffect(()=>{
         setLoading(true)
-    },[])
+    },[setLoading])
     return (
         <div className="about-container" onLoad={()=>setLoading(false)}>
             <img src={me} className="me" alt="me"/>
