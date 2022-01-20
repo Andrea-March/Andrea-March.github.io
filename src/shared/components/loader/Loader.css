@@ -12,7 +12,6 @@
 .spinner {
     width: 200px;
     height: 200px;
-    transform: translate3d(50%, 50%, 0);
     animation: load 1s infinite linear;
 }
 

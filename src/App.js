@@ -43,14 +43,14 @@ function App() {
               <Header />
               <Loader loading={loading} />
               <Routes>
-                  <Route exact path='/' element={<Home setLoading={setLoading}/>} />
+                  <Route exact path='/' element={<Home />} />
                   <Route path='/articles/:id' element={<ArticlePage setLoading={setLoading}/>} />
                   <Route exact path='/products' element={<ProductsHome />} />
                   <Route exact path='/products/powders' element={<Powders />} />
                   <Route exact path='/products/machines' element={<Machines />} />
                   <Route exact path='/articles' element={<Articles setLoading={setLoading}/>} />
                   <Route exact path='/guides' element={<Guides />} />
-                  <Route exact path='/about' element={<About />} />
+                  <Route exact path='/about' element={<About setLoading={setLoading}/>} />
                   <Route exact path='/contacts' element={<ContactUs />} />
                   <Route exact path='thank-you' element={<ThankYou />} />
                   <Route exact path='*' element={<PageNotFound />} />

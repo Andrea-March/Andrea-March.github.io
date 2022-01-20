@@ -14,7 +14,7 @@ const Trending = ({articles}) =>{
 
     return (
         <div className="trending-list">
-            { articles.map((article) => {
+            { articles && articles.map((article) => {
                 return (
                     <ArticleCard key={article.id} article={article} onClick={()=>{onClick(article.id)}} position="center"/>
                 )

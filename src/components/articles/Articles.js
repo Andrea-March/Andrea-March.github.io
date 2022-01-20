@@ -29,7 +29,9 @@ const Articles = ({setLoading}) => {
 
     useEffect(()=>{
         setLoading(true)
-        getList().then(setArticleList).catch((err)=>setMock())
+        getList()
+            .then(setArticleList)
+            .catch((err)=>setMock())
     },[])
 
     return(

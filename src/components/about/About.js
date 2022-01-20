@@ -1,18 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import './About.css'
 import me from '../../static/me.webp'
 import {useNavigate} from "react-router-dom";
 
 
-const About = () => {
+const About = ({setLoading}) => {
     const navigate = useNavigate()
 
     const goToContact = () =>{
         navigate('/contacts');
     }
+
+    useEffect(()=>{
+        setLoading(true)
+    },[])
     return (
-        <div className="about-container">
+        <div className="about-container" onLoad={()=>setLoading(false)}>
             <img src={me} className="me" alt="me"/>
             <div className="me-description">
                 <p>

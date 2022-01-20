@@ -6,7 +6,7 @@ import espresso from '../../static/espresso-ok2.webp'
 import whoweare from '../../static/background.webp'
 import './home.css'
 
-const Home = ({setLoading}) =>{
+const Home = () =>{
     let navigate = useNavigate();
     const goToArticles = () => {
         navigate('/articles');
@@ -14,9 +14,8 @@ const Home = ({setLoading}) =>{
     const goToAbout = () =>{
         navigate('/about');
     }
-    setLoading(true)
     return (
-        <div className="home dFlex" onLoad={()=>setLoading(false)}>
+        <div className="home dFlex" >
             <div className="cover" />
             {/* <div className={"btn-enter"} onClick={navigateProducts} id="link-to-page">
                     <p>Lasciati avvolgere dal gusto</p>
