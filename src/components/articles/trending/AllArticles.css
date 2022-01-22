@@ -53,6 +53,28 @@
 .search-bar .fa{
     color: var(--accent);
 }
+
+
+.active-slide {
+    opacity:1 !important;
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
+    transform: translateX(0%) !important;
+}
+
+.slide-in {
+    opacity: 0;
+    transition:1s;
+}
+
+.left-pos {
+    transform: translateX(-50%);
+}
+
+.right-pos {
+    transform: translateX(50%);
+}
+
 @media all and (max-width: 820px) {
     .trending-list{
         flex-direction: column;

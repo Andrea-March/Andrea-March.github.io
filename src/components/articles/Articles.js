@@ -39,7 +39,7 @@ const Articles = ({setLoading}) => {
     },[setLoading])
 
     return(
-        <div className="flex-column" onLoad={()=>setLoading(false)}>
+        <div className="flex-column articles-body" onLoad={()=>setLoading(false)}>
           <ArticlesCarousel articles={trendingList}/>
             <div className="trending">
                 <div className="trending-title">

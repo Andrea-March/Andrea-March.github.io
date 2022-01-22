@@ -6,6 +6,9 @@
     align-items: center;
     flex-direction: row;
 }
+.articles-body {
+    overflow-x: hidden;
+}
 .powders {
     background-image: url("../../static/cover.webp");
 }
