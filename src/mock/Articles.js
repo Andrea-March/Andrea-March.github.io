@@ -169,4 +169,18 @@ const articleMock= {
     trending: true
 }
 
-export {ArticleList, articleMock};
+const emptyArticle = {
+    id: 0,
+    title: '',
+    date: '',
+    thumb: '',
+    cover: '',
+    imgalt: '',
+    related: [{
+        id: -1,
+        title: ''
+    }],
+    trending: true
+}
+
+export {ArticleList, articleMock, emptyArticle};

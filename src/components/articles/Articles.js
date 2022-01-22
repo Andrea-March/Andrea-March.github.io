@@ -1,25 +1,12 @@
 import React, {useEffect, useState} from "react";
 import './articles.css'
 import ArticlesCarousel from "./ArticlesCarousel";
-import {ArticleList} from "../../mock/Articles";
+import {ArticleList, emptyArticle} from "../../mock/Articles";
 import {getList, getTrending} from "../../service/retrieve";
 import AllArticles from "./trending/AllArticles";
 
 const Articles = ({setLoading}) => {
 
-    const emptyArticle = {
-        id: 0,
-        title: '',
-        date: '',
-        thumb: '',
-        cover: '',
-        imgalt: '',
-        related: [{
-            id: -1,
-            title: ''
-        }],
-        trending: true
-    }
 
     const [articleList, setArticleList] = useState([emptyArticle])
     const [trendingList, setTrendingList] = useState([emptyArticle])

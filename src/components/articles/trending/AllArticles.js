@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import ArticleCard from "../article-card/ArticleCard";
 
 import './AllArticles.css'
@@ -7,15 +7,14 @@ import {useNavigate} from "react-router-dom";
 const AllArticles = ({articles}) =>{
 
     const navigate = useNavigate()
-
-    let sliderImages = []
+    let sliderImages = useRef([])
     const onClick = (id) =>{
         navigate(`/articles/${id}`)
     }
 
 
     const slideListener = () => {
-        sliderImages.forEach((card)=>{
+        sliderImages.current.forEach((card)=>{
             const slideInAt = (window.scrollY + window.innerHeight) - card.getBoundingClientRect().height / 4
             const imageBottom = card.offsetTop + card.getBoundingClientRect().height;
             const isHalfShown = slideInAt > card.offsetTop;
@@ -43,8 +42,7 @@ const AllArticles = ({articles}) =>{
     };
 
     useEffect(()=>{
-        sliderImages = document.querySelectorAll('.slide-in');
-        //const sliderImages = document.querySelectorAll('.slide-in');
+        sliderImages.current = document.querySelectorAll('.slide-in')
         window.addEventListener('scroll', debounce(slideListener))
         return () => {
             window.removeEventListener('scroll', debounce(slideListener))
