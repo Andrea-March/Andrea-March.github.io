@@ -62,6 +62,7 @@
     height: 400px;
     width: 100%;
     top: 65%;
+    left:0 ;
     background-color: var(--primary);
 }
 .trending-title h1 {
