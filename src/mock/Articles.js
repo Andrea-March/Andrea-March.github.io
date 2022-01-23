@@ -180,7 +180,8 @@ const emptyArticle = {
         id: -1,
         title: ''
     }],
-    trending: true
+    trending: true,
+    amazon_frame: ''
 }
 
 export {ArticleList, articleMock, emptyArticle};

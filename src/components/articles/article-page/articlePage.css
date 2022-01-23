@@ -129,6 +129,18 @@
 
 }
 
+.adblock {
+    margin-top: 20px;
+    color: red;
+    width: 250px;
+    height: 250px;
+    border: grey solid 1px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
 @media all and (max-width: 820px){
     .art-body{
         width: 92% !important;

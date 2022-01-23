@@ -40,7 +40,10 @@ const ArticlePage = ({setLoading}) => {
     useEffect(()=>{
         setLoading(true)
         window.addEventListener('scroll', scrollListener)
-        getArticle(id).then(setArticle).catch(() => {
+        getArticle(id).then((res)=>{
+            console.log(res.amazon_frame)
+            setArticle(res)
+        }).catch(() => {
             setArticle(articleMock)
         })
         return () => {
@@ -101,14 +104,20 @@ const ArticlePage = ({setLoading}) => {
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
-                <div className="amzn-links">
-                    <div className="amz-links-title">Wanna try it yourself? Check out this product!</div>
-                    <iframe style={{width:"250px",height:"250px"}} marginWidth="0" marginHeight="0" scrolling="no"
-                            frameBorder="0"
-                            title="amzn-link"
-                            src={amznLink}>
-                    </iframe>
-                </div>
+                {
+                    article.amazon_frame &&
+                    <div className="amzn-links">
+                        <div className="amz-links-title">Wanna try it yourself? Check out this product!</div>
+                        <Markup content={article.amazon_frame} id="amazon-frame"/>
+                    </div>
+
+                }
+                {
+                    !document.getElementById("amazon-frame") &&
+                    <div className="adblock">
+                        <p>We recommend that you disable adblock to see suggested products. This blog is powered by affiliate marketing earnings</p>
+                    </div>
+                }
 
             </div>
             <CommentSection comments={article.comments} articleId={article.id} likes={article.likes} dislikes={article.dislikes} hearts={article.hearts}/>
