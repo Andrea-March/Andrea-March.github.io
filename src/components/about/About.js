@@ -3,6 +3,7 @@ import React, {useEffect} from "react";
 import './About.css'
 import me from '../../static/me.webp'
 import {useNavigate} from "react-router-dom";
+import Button from "../buttons/Button";
 
 
 const About = ({setLoading}) => {
@@ -41,11 +42,8 @@ const About = ({setLoading}) => {
                 <p>
                     If you feel like sharing your opinion or experience, don't think twice:
                 </p>
-                <div className="contact-link-container" onClick={() => goToContact()}>
-                    <p className="go-to-contacts">- Contact Section! -</p>
-                </div>
-
             </div>
+            <Button text="Contact Section!" click={goToContact}/>
         </div>
     )
 }

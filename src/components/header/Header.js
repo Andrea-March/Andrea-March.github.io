@@ -55,6 +55,9 @@ const Header = () =>{
                         <li className="nav-item">
                             <Link to="/contacts" className="nav-links" onClick={closeMobileMenu}>Contact</Link>
                         </li>
+                        <li className="nav-item">
+                            <a target="_blank" rel="noreferrer" href="https://www.buymeacoffee.com/cofeelovers" className="nav-links" onClick={closeMobileMenu}>Buy Me a Coffee</a>
+                        </li>
                         <li className="nav-item" >
                             <div className="nav-links signin" onClick={() =>{openNetlify()}}> {signText}</div>
                         </li>

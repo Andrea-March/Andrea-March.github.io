@@ -3,16 +3,12 @@ import {useNavigate} from "react-router-dom";
 import coffeeflavors from '../../static/coffee-flavors2.webp'
 import coffeecup from '../../static/coffee-cup-ok2.webp'
 import espresso from '../../static/espresso-ok2.webp'
-import whoweare from '../../static/background.webp'
 import './home.css'
 
 const Home = () =>{
     let navigate = useNavigate();
     const goToArticles = () => {
         navigate('/articles');
-    }
-    const goToAbout = () =>{
-        navigate('/about');
     }
     return (
         <div className="home dFlex" >
@@ -40,25 +36,7 @@ const Home = () =>{
                 </div>
 
             </div>
-            <div className="flex-column mb-10">
-                <div className="whoarewe dFlex">
-                    <p>About</p>
-                </div>
-                <div className="whoarewe-row">
-                    <img src={whoweare} alt=""/>
-                    <div className="find-out-more dFlex">
-                        <p>
-                            My name is Andrea, and I'm a coffee lover! I'd like to share my passion with everybody, and I have this blog to talk about my favorite beverage!
-                        </p>
-                        <p>
-                            Find out more!
-                        </p>
-                        <div className="find-out-more-btn dFlex" onClick={() => goToAbout()}>
-                            <p>- About Me -</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
 
     )

@@ -40,6 +40,10 @@
     background-color: var(--accent);
 }
 
+.bg-primary {
+    background-color: var(--primary);
+}
+
 .color-primary {
     color: var(--primary);
 }
