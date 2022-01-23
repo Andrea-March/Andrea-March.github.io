@@ -33,6 +33,24 @@
 
 }
 
+.art-body a {
+    text-decoration: none;
+    color: var(--link)
+}
+.amazon-item {
+    flex-direction: column;
+    width: 250px;
+}
+
+.amazon-content {
+    color: var(--link);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .art-body img {
     width: 100%;
 }
@@ -126,7 +144,7 @@
     font-size: 1.6rem;
     font-weight: bold;
     width: 90%;
-
+    margin-bottom: 25px;
 }
 
 .adblock {

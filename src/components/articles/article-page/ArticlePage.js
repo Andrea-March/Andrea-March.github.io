@@ -13,9 +13,9 @@ const ArticlePage = ({setLoading}) => {
 
     const { id } = useParams();
     const navigation = useNavigate()
-    //const amznLink = "https://rcm-eu.amazon-adsystem.com/e/cm?ref=tf_til&t=coffeesite-21&m=amazon&o=29&p=8&l=as1&IS1=1&asins=B088FWM1XR&linkId=911b93feb167d000c78531ce94393711&bc1=ffffff&amp;lt1=_blank&fc1=333333&lc1=d4dbe0&bg1=ffffff&f=ifr"
-    const amznLink = "https://rcm-eu.amazon-adsystem.com/e/cm?ref=tf_til&t=coffeesite-21&m=amazon&o=29&p=8&l=as1&IS2=1&asins=B002BA2I7A&linkId=507476f054799309329b2a74ba7c3345&bc1=ffffff&amp;lt1=_blank&fc1=333333&lc1=d4dbe0&bg1=ffffff&f=ifr"
     const [article, setArticle] = useState(undefined)
+    const [amazonFrames, setAmazonFrames] = useState(undefined)
+    //const [userContinent, setUserContinent] = useState('')
 
     const goBack = () => {
         navigation("/articles")
@@ -41,8 +41,8 @@ const ArticlePage = ({setLoading}) => {
         setLoading(true)
         window.addEventListener('scroll', scrollListener)
         getArticle(id).then((res)=>{
-            console.log(res.amazon_frame)
-            setArticle(res)
+            setArticle(res);
+            setAmazonFrames(JSON.parse(res.amazon_frame))
         }).catch(() => {
             setArticle(articleMock)
         })
@@ -105,18 +105,31 @@ const ArticlePage = ({setLoading}) => {
                     </script>
                 </div>
                 {
-                    article.amazon_frame &&
+                    amazonFrames &&
                     <div className="amzn-links">
-                        <div className="amz-links-title">Wanna try it yourself? Check out this product!</div>
-                        <Markup content={article.amazon_frame} id="amazon-frame"/>
-                    </div>
+                        <div className="amz-links-title">Wanna try it yourself? Check out the featured products!</div>
+                        <div className="amazon-content">
+                        {   amazonFrames.map((frame)=>{
+                            return(
+                                <div className="amazon-item">
+                                <Markup content={frame.link}/>
+                                <p>{frame.description}</p>
+                                </div>
+                            )
+                        })
 
+                        }
+                        </div>
+
+                    </div>
                 }
                 {
+                    /*
                     !document.getElementById("amazon-frame") &&
                     <div className="adblock">
                         <p>We recommend that you disable adblock to see suggested products. This blog is powered by affiliate marketing earnings</p>
                     </div>
+                    */
                 }
 
             </div>
