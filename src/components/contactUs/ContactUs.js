@@ -11,9 +11,12 @@ const ContactUs = () => {
 
     const navigate = useNavigate()
 
+    let defaultName = netlifyIdentity.currentUser() ? netlifyIdentity.currentUser().user_metadata.full_name : ""
+    let defaultMail = netlifyIdentity.currentUser() ? netlifyIdentity.currentUser().email : ""
+
     const errorMessage = "Something went wrong, please try again later!"
-    const [name, setName] = useState( "")
-    const [mail, setMail] = useState( "")
+    const [name, setName] = useState( defaultName)
+    const [mail, setMail] = useState( defaultMail)
     const [message, setMessage] = useState("")
     const [toastText, setToastText] = useState("")
     const [showToast, setShowToast] = useState(false)
@@ -37,8 +40,7 @@ const ContactUs = () => {
         setTimeout(()=> {setShowToast(false); setToastText("")},3000)
     }
 
-    let defaultName = netlifyIdentity.currentUser() ? netlifyIdentity.currentUser().user_metadata.full_name : ""
-    let defaultMail = netlifyIdentity.currentUser() ? netlifyIdentity.currentUser().email : ""
+
     return(
         <div className="w-100 flex-column bg-acc">
             {
