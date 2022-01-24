@@ -32,7 +32,7 @@ const Articles = ({setLoading}) => {
                 <div className="trending-title">
                     <h1>All Articles</h1>
                 </div>
-                <AllArticles articles={articleList}/>
+                <AllArticles articles={articleList} setLoading={setLoading}/>
             </div>
             {/*
              <div className="shortcut-images">

@@ -39,8 +39,9 @@ const ArticlePage = ({setLoading}) => {
 
     useEffect(()=>{
         setLoading(true)
-        window.addEventListener('scroll', scrollListener)
+
         getArticle(id).then((res)=>{
+            window.addEventListener('scroll', scrollListener)
             setArticle(res);
             try{
                 setAmazonFrames(JSON.parse(res.amazon_frame))
@@ -48,6 +49,7 @@ const ArticlePage = ({setLoading}) => {
                 setAmazonFrames("")
             }
         }).catch((err) => {
+            window.addEventListener('scroll', scrollListener)
             setArticle(articleMock)
         })
         return () => {

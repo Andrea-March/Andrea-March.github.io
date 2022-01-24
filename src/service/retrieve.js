@@ -14,6 +14,10 @@ const getList =  () => {
     return fetch(backendUrl+'/article-card/').then(handleReponse)
 }
 
+const getArticlesByTag = (search) =>{
+    return fetch(backendUrl+`/article-card/?search=${search}`).then(handleReponse)
+}
+
 const getTrending = () => {
     return fetch(backendUrl+'/article-card/?trending=true').then(handleReponse)
 }
@@ -65,4 +69,4 @@ const sendComment = (articleId, comment, netlifyUser) => {
 
 }
 
-export {getList, getArticle, send, sendComment, sendReaction, getTrending}
+export {getList, getArticle, send, sendComment, sendReaction, getTrending, getArticlesByTag}

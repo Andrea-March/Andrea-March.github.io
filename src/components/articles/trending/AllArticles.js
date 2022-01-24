@@ -1,20 +1,48 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import ArticleCard from "../article-card/ArticleCard";
 
 import './AllArticles.css'
 import {useNavigate} from "react-router-dom";
+import {getArticlesByTag, getList} from "../../../service/retrieve";
 
-const AllArticles = ({articles}) =>{
+const AllArticles = ({articles ,setLoading}) =>{
 
     const navigate = useNavigate()
     let sliderImages = useRef([])
+
+    const [search, setSearch] = useState("")
+    const [articleList, setArticleList] = useState(articles)
+    console.log(articleList)
     const onClick = (id) =>{
         navigate(`/articles/${id}`)
     }
 
+    const searchArticles = () =>{
+        setLoading(true)
+        getArticlesByTag(search).then((res)=>{
+            setArticleList(res)
+            setLoading(false)
+        }).catch((err) => {
+            console.log(err)
+            setLoading(false)
+        })
+    }
+
+    const resetArticles = () => {
+        setLoading(true)
+        getList()
+            .then((res)=>{
+                setArticleList(res)
+                setLoading(false)
+            })
+            .catch((err)=> {
+                console.log(err)
+                setLoading(false)
+            })
+    }
 
     const slideListener = () => {
-        sliderImages.current.forEach((card)=>{
+        sliderImages.current.forEach((card, index)=>{
             const slideInAt = (window.scrollY + window.innerHeight) - card.getBoundingClientRect().height / 4
             const imageBottom = card.offsetTop + card.getBoundingClientRect().height;
             const isHalfShown = slideInAt > card.offsetTop;
@@ -47,22 +75,36 @@ const AllArticles = ({articles}) =>{
         return () => {
             window.removeEventListener('scroll', debounce(slideListener))
         }
+    },[articleList])
+
+    useEffect(()=>{
+        setArticleList(articles)
     },[articles])
 
     return (
         <>
             <div className="search-bar flex-row">
                 <p>Search Articles:</p>
-                <input type="text" placeholder="keyword"/>
-                <i className="fa fa-search fa-2x" />
+                <input type="text" placeholder="keyword" onChange={(e) => setSearch(e.target.value)}/>
+                <div className="dFlex">
+                    <i className="fa fa-search fa-2x" onClick={()=>searchArticles()}/>
+                    <i className="fa fa-undo fa-2x" onClick={()=>resetArticles()}/>
+                </div>
             </div>
         <div className="trending-list">
-            { articles && articles.map((article,index) => {
+            { articleList && articleList.map((article,index) => {
                 let slideClass = index % 2 === 0 ? 'slide-in left-pos' : 'slide-in right-pos'
                 return (
                     <ArticleCard slideIn={slideClass} key={article.id} article={article} onClick={()=>{onClick(article.id)}} position="center" preview="preview"/>
                 )
             }) }
+            {
+                !articleList.length && (
+                    <div className="no-results">
+                        No Articles Found!
+                    </div>
+                )
+            }
         </div>
         </>
     )

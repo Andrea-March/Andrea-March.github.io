@@ -44,7 +44,7 @@ const Footer = () =>{
 
         <div className="footer flex-column">
             <div className="flex-row">
-                <p>Copyright @2021 For Coffee Lovers</p>
+                <p>Copyright @2022 For Coffee Lovers</p>
                 <p>All Rights Reserved</p>
                 <div className="social flex-row">
                     <i className="fa fa-facebook fa-2x"  onClick={()=>{}}/>
