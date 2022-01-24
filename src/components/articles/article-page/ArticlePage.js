@@ -42,8 +42,12 @@ const ArticlePage = ({setLoading}) => {
         window.addEventListener('scroll', scrollListener)
         getArticle(id).then((res)=>{
             setArticle(res);
-            setAmazonFrames(JSON.parse(res.amazon_frame))
-        }).catch(() => {
+            try{
+                setAmazonFrames(JSON.parse(res.amazon_frame))
+            }catch {
+                setAmazonFrames("")
+            }
+        }).catch((err) => {
             setArticle(articleMock)
         })
         return () => {
