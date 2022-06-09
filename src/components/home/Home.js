@@ -24,15 +24,15 @@ const Home = () =>{
                 </div>
                 <div className="gallery-element">
                     <p>Discover the warm taste of a single origin coffee, and let yourself be lulled by its fresh and intense flavors and aromas</p>
-                    <img src={coffeeflavors} onClick={goToArticles} alt=""/>
+                    <img src={coffeeflavors} loading="lazy" onClick={goToArticles} alt=""/>
                 </div>
                 <div className="gallery-element right-description">
                     <p>Discover the particularities and singular characteristics of coffees from all over the world</p>
-                    <img src={coffeecup} onClick={goToArticles} alt="https://unsplash.com/photos/nBJHO6wmRWw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
+                    <img src={coffeecup} loading="lazy" onClick={goToArticles} alt="https://unsplash.com/photos/nBJHO6wmRWw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
                 </div>
                 <div className="gallery-element last">
                     <p>Discover the best coffee extraction methods, to fully enjoy your cup and appreciate all the nuances of your coffee</p>
-                    <img src={espresso} onClick={goToArticles} alt="https://unsplash.com/photos/KixfBEdyp64?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
+                    <img src={espresso} loading="lazy" onClick={goToArticles} alt="https://unsplash.com/photos/KixfBEdyp64?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
                 </div>
 
             </div>
