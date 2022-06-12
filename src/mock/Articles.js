@@ -15,7 +15,7 @@ const ArticleList = [
         trending: true
     },{
         id: 2,
-        title: 'The Perfect Frech Press',
+        title: 'The Perfect French Press',
         date: '2021.11.26',
         thumb: french,
         related: [1,3,4],
