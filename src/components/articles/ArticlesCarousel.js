@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import ArticleCard from "./article-card/ArticleCard";
 import {useNavigate} from "react-router-dom";
 import './ArticlesCarousel.css'
+import CarouselArticleCard from "./article-card/CarouselArticleCard";
 //import {getList} from "../../service/retrieve";
 
 const ArticlesCarousel = ({articles}) => {
@@ -29,18 +29,18 @@ const ArticlesCarousel = ({articles}) => {
     }
     return(
         <div className="cover-articles">
-            <div className="trending-carousel">
-                <h1>Trending</h1>
-            </div>
-            <ArticleCard article={articles[getPrevious(currentIndex)]} position={"left"} onClick={()=>{}}/>
+            {/*<div className="trending-carousel">*/}
+            {/*    <h1>Trending</h1>*/}
+            {/*</div>*/}
+            {/*<ArticleCard article={articles[getPrevious(currentIndex)]} position={"left"} onClick={()=>{}}/>*/}
             <div className="sliding-arrow" onClick={slideLeft}>
-                <i className="fa fa-angle-left fa-3x"/>
+                <i className="fa fa-angle-left fa-3x" id="arrow-left"/>
             </div>
-            <ArticleCard article={articles[currentIndex]} position={"center"} onClick={handleProceed}/>
+            <CarouselArticleCard article={articles[currentIndex]} onClick={handleProceed}/>
             <div className="sliding-arrow right-arr" onClick={slideRight}>
                 <i className="fa fa-angle-right fa-3x"/>
             </div>
-            <ArticleCard article={articles[getNext(currentIndex)]} position={"right"} onClick={()=>{}}/>
+            {/*<ArticleCard article={articles[getNext(currentIndex)]} position={"right"} onClick={()=>{}}/>*/}
         </div>
     )
 }

@@ -1,0 +1,88 @@
+.carousel-image-wrapper {
+    width: 80%;
+    max-width: 80%;
+    max-height: 340px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-article-card{
+    width: 60%;
+    z-index: 3;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    height: 700px;
+    overflow: hidden;
+}
+
+.carousel-img {
+    position: absolute;
+    width: 35%;
+    height: 720px;
+    cursor: pointer;
+}
+
+.carousel-card-title {
+    margin-top: 15%;
+}
+
+.carousel-card-data-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    width: 25%;
+    height: 30%;
+    border: 10px solid white;
+    text-align: center;
+
+    font-size: 2.5rem;
+    color: white;
+
+}
+
+.carousel-card-date {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1rem;
+}
+
+
+@media screen and (max-width: 820px) {
+    .image-wrapper{
+        max-height: 310px;
+    }
+    .carousel-article-card{
+        width: 80%;
+        height: 400px;
+    }
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .carousel-img {
+        width: 80%;
+        height: 400px;
+    }
+
+    .carousel-card-data-container {
+        width: 65%;
+        height: 60%;
+    }
+
+}
+
+@media screen and (min-width: 820px) and (max-width: 1400px) {
+
+    .carousel-img {
+        width: 60%;
+        height: 600px;
+    }
+
+}
