@@ -4,7 +4,7 @@ import './relatedCard.css'
 import '../article-card/ArticleCard.css'
 import {useNavigate} from "react-router-dom";
 
-import placeholder from '../../../static/v60/v60_ok.jpg'
+import placeholder from '../../../static/v60/v60_ok.webp'
 
 const RelatedCard = ({related}) => {
 

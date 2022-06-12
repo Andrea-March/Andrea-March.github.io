@@ -1,8 +1,8 @@
-import v60 from "../static/v60/v60_ok.jpg";
-import french from "../static/french/french_press_ok.jpg";
-import cappuccino from "../static/cappuccino/cappuccino_ok.jpg";
-import chemex from "../static/v60/v60-ok2.jpg";
-import cup from '../static/cup_ok.jpg'
+import v60 from "../static/v60/v60_ok.webp";
+import french from "../static/french/french_press_ok.webp";
+import cappuccino from "../static/cappuccino/cappuccino_ok.webp";
+import chemex from "../static/v60/v60-ok2.webp";
+import cup from '../static/cup_ok.webp'
 
 const ArticleList = [
     {
