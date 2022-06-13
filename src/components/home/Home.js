@@ -16,7 +16,7 @@ const Home = () =>{
             {/* <div className={"btn-enter"} onClick={navigateProducts} id="link-to-page">
                     <p>Lasciati avvolgere dal gusto</p>
                 </div> */}
-            <div className="temporary-div">Site Under Construction!</div>
+            {/*<div className="temporary-div">Site Under Construction!</div>*/}
             <div className="logo-write dFlex">For Coffee Lovers</div>
             <div className="gallery flex-column">
                 <div className="gallery-title">

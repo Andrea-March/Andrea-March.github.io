@@ -3,6 +3,7 @@ import './header.css'
 import logo from '../../static/logo_new.webp'
 import {Link} from "react-router-dom";
 import netlifyIdentity from 'netlify-identity-widget'
+import LocalStorageService from "../../service/localStorageService";
 
 const Header = () =>{
     const [click, setClick] = useState(false);
@@ -27,8 +28,16 @@ const Header = () =>{
             <div className="navbar-container">
                 <nav className="navbar">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        <img className="logo-img" src={logo} alt=""/><p className="logo-name">For Coffee Lovers.</p>
+                        <img className="logo-img" src={logo} alt=""/>
+                        <p className="logo-name">For Coffee Lovers.</p>
                     </Link>
+                    {
+                        LocalStorageService.getUser() && (
+                            <p className="welcome-user">
+                                Hi, {LocalStorageService.getUser().username}!
+                            </p>
+                        )
+                    }
                     <div className="menu-icon" onClick={handleClick}>
                         <i className={click ? "fa fa-times" : "fa fa-bars"} />
                     </div>

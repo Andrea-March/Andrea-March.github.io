@@ -43,6 +43,9 @@ const CommentSection = ({comments, likes, dislikes, hearts, articleId}) => {
             window.location.reload(false);
         })
     }
+
+    //TODO make this better: the textarea to comment has bold and other text options, comments are better shaped, see
+    //other blogs. add like/dislike to comments if possible
     return(
         <div className="comments-container">
             <h4 className="comments-title">What do you think about this article? Let others know!</h4>
