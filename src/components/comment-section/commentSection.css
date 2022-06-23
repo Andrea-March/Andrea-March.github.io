@@ -1,5 +1,5 @@
 .comments-container{
-    width: 100%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,6 +11,10 @@
     margin-bottom: 15px;
 }
 
+.horizontal-line{
+    width: 100%;
+    margin: 20px;
+}
 .user-date {
     display: flex;
     font-size: 1.3rem;
@@ -31,7 +35,9 @@
 }
 
 .comments-title {
+    align-items: flex-start;
     font-size: 2rem;
+    margin-bottom: 0;
 }
 
 .comment-body {
@@ -60,7 +66,9 @@
     justify-content: center;
     margin-bottom: 20px;
 }
-
+.align-baseline{
+    align-self: baseline;
+}
 .likes{
     display: flex;
     flex-direction: column;
@@ -77,11 +85,12 @@
 .comment-text{
     min-height: 75px;
     max-height: 75px;
-    max-width: 80%;
-    min-width: 80%;
+    max-width: 100%;
+    min-width: 100%;
     background-color: var(--accent);
     font-size: 1.3rem;
     padding: 10px;
+    margin-left: 13px;
     color:  #9b9b9b;
 }
 .comment-text:focus {
@@ -102,6 +111,10 @@
     text-align: center;
 }
 
+.comment-label {
+    width: 100%;
+}
+
 
 
 
@@ -112,6 +125,7 @@
 
     .comments-title {
         width: 90%;
+        margin-top: 0;
     }
 
     .own-comment{
@@ -119,6 +133,11 @@
     }
     .reactions {
         display: flex;
+        margin-top: 20px;
+    }
+    .horizontal-line{
+        width: 90%;
+        margin: 10px;
     }
 
 }
