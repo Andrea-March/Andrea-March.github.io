@@ -57,6 +57,10 @@
   .card{
     width: 75%
   }
+
+  .h3 {
+    top: 100px
+  }
 }
 
 .card:hover {

@@ -85,12 +85,11 @@
 .comment-text{
     min-height: 75px;
     max-height: 75px;
-    max-width: 100%;
-    min-width: 100%;
+    max-width: 93%;
+    min-width: 93%;
     background-color: var(--accent);
     font-size: 1.3rem;
     padding: 10px;
-    margin-left: 13px;
     color:  #9b9b9b;
 }
 .comment-text:focus {

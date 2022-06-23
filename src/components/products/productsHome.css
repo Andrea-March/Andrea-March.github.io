@@ -1,7 +1,7 @@
 .product-types {
     position: relative;
     /*background-image: url("./static/background.jpg");*/
-    background-color: var(--primary);
+    background-color: var(--accent);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,7 +14,7 @@
 .product-single-type {
     width: 25%;
     height: 100%;
-    background-color: var(--primary);
+    background-color: var(--accent);
     justify-content: center;
     text-align: center;
     transition: all .3s ease-in-out;

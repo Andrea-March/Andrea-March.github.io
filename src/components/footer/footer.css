@@ -11,6 +11,13 @@
     height: 50px;
     color: black;
 }
+.z-index-920{
+    z-index: 920;
+}
+
+.position-absolute{
+    position: absolute;
+}
 
 .footer p {
     font-size: 16px;

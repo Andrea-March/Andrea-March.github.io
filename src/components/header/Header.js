@@ -3,7 +3,6 @@ import './header.css'
 import logo from '../../static/logo_new.webp'
 import {Link} from "react-router-dom";
 import netlifyIdentity from 'netlify-identity-widget'
-import LocalStorageService from "../../service/localStorageService";
 
 const Header = () =>{
     const [click, setClick] = useState(false);
@@ -31,13 +30,13 @@ const Header = () =>{
                         <img className="logo-img" src={logo} alt=""/>
                         <p className="logo-name">For Coffee Lovers.</p>
                     </Link>
-                    {
-                        LocalStorageService.getUser() && (
-                            <p className="welcome-user">
-                                Hi, {LocalStorageService.getUser().username}!
-                            </p>
-                        )
-                    }
+                    {/*{*/}
+                    {/*    LocalStorageService.getUser() && (*/}
+                    {/*        <p className="welcome-user">*/}
+                    {/*            Hi, {LocalStorageService.getUser().username}!*/}
+                    {/*        </p>*/}
+                    {/*    )*/}
+                    {/*}*/}
                     <div className="menu-icon" onClick={handleClick}>
                         <i className={click ? "fa fa-times" : "fa fa-bars"} />
                     </div>
@@ -48,8 +47,13 @@ const Header = () =>{
                             </Link>
                         </li>
                         <li className="nav-item">
+                            <Link to="/products" className="nav-links" onClick={closeMobileMenu}>
+                                Products
+                            </Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to="/articles" className="nav-links" onClick={closeMobileMenu}>
-                                Articles
+                                Blog
                             </Link>
                         </li>
                         {/*
