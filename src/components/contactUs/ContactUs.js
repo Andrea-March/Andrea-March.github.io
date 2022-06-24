@@ -76,7 +76,7 @@ const ContactUs = () => {
                           required maxLength={500}
                           onChange={(e) =>{setMessage(e.target.value)}}
                 />
-                <p className="max-length">max length: 500 words</p>
+                <p className="max-length">max length: 500 characters</p>
                 <p>
                     I can be contacted back at my email address:
                 </p>

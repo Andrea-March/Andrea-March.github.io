@@ -8,7 +8,7 @@ const Footer = () =>{
 
     const navigate = useNavigate()
     return(
-        <>
+        <div className="z-index-920 position-absolute">
             <div className="flex-column mb-10 bg-primary">
                 <div className="whoarewe dFlex">
                     <p>About</p>
@@ -55,7 +55,7 @@ const Footer = () =>{
                 <p>Privacy Policy</p>
             </div>
         </div>
-        </>
+        </div>
     )
 }
 

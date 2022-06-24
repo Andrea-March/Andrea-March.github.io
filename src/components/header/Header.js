@@ -27,8 +27,16 @@ const Header = () =>{
             <div className="navbar-container">
                 <nav className="navbar">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        <img className="logo-img" src={logo} alt=""/><p className="logo-name">For Coffee Lovers.</p>
+                        <img className="logo-img" src={logo} alt=""/>
+                        <p className="logo-name">For Coffee Lovers.</p>
                     </Link>
+                    {/*{*/}
+                    {/*    LocalStorageService.getUser() && (*/}
+                    {/*        <p className="welcome-user">*/}
+                    {/*            Hi, {LocalStorageService.getUser().username}!*/}
+                    {/*        </p>*/}
+                    {/*    )*/}
+                    {/*}*/}
                     <div className="menu-icon" onClick={handleClick}>
                         <i className={click ? "fa fa-times" : "fa fa-bars"} />
                     </div>
@@ -39,8 +47,13 @@ const Header = () =>{
                             </Link>
                         </li>
                         <li className="nav-item">
+                            <Link to="/products" className="nav-links" onClick={closeMobileMenu}>
+                                Products
+                            </Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to="/articles" className="nav-links" onClick={closeMobileMenu}>
-                                Articles
+                                Blog
                             </Link>
                         </li>
                         {/*

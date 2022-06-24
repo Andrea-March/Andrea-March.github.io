@@ -10,17 +10,32 @@ const Home = () =>{
     const goToArticles = () => {
         navigate('/articles');
     }
+
+    const navigateToProducts = () => {
+        navigate('/products');
+    }
     return (
         <div className="home dFlex" >
             <div className="cover" />
             {/* <div className={"btn-enter"} onClick={navigateProducts} id="link-to-page">
                     <p>Lasciati avvolgere dal gusto</p>
                 </div> */}
-            <div className="temporary-div">Site Under Construction!</div>
+            {/*<div className="temporary-div">Site Under Construction!</div>*/}
             <div className="logo-write dFlex">For Coffee Lovers</div>
+
             <div className="gallery flex-column">
                 <div className="gallery-title">
-                    <p>Find out all about coffee</p>
+                    <p>Choose the best product for you</p>
+                </div>
+                <div className="gallery-element" onClick={navigateToProducts}>
+                    <p>choose the best bean to have your favorite flavor at home, whenever you want</p>
+                    <img src="https://drive.google.com/uc?id=1eBB4svjPXBrM9L86_b0-xmA9rVnd2cf4" loading="lazy" onClick={goToArticles} alt=""/>
+                </div>
+            </div>
+
+            <div>
+                <div className="gallery-title">
+                    <p>Find out all about coffee in the blog section</p>
                 </div>
                 <div className="gallery-element">
                     <p>Discover the warm taste of a single origin coffee, and let yourself be lulled by its fresh and intense flavors and aromas</p>
@@ -36,6 +51,8 @@ const Home = () =>{
                 </div>
 
             </div>
+
+
 
         </div>
 

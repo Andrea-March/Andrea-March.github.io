@@ -26,6 +26,8 @@
     margin: 10px 0 10px 2%;
     border: 2px solid grey;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .art-body h4{
@@ -52,7 +54,8 @@
 }
 
 .art-body img {
-    width: 100%;
+    width: 65%;
+    align-self: center;
 }
 .sum-up{
     margin-top: 0;
@@ -184,6 +187,10 @@
     .advmobile {
         /*display: flex; uncomment to get ad space*/
         display: none;
+    }
+
+    .art-body img {
+        width: 100%;
     }
 }
 

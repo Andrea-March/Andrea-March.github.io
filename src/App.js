@@ -18,6 +18,7 @@ import netlifyIdentity from 'netlify-identity-widget'
 import {useEffect, useState} from "react";
 import {loginUser, logoutUser} from "./lib/identityAction";
 import Loader from "./shared/components/loader/Loader";
+import LocalStorageService from "./service/localStorageService";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         netlifyIdentity.on("logout", (user) => {
             logoutUser()
             netlifyIdentity.close()
+            LocalStorageService.deleteUser()
             window.location.reload(false)
         });
         netlifyIdentity.on('close', () => {});

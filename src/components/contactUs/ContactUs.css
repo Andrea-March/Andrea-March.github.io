@@ -64,7 +64,7 @@
 .message-text{
     min-height: 200px;
     min-width: 50%;
-    max-width: 90%;
+    max-width: 50%;
     font-size: 1.3rem;
     padding: 10px;
     color:  #9b9b9b;
@@ -115,7 +115,8 @@
         width: 95%;
     }
     .message-text{
-        width: 90%;
+        min-width: 90%;
+        max-width: 90%;
         height: 400px;
 
     }
