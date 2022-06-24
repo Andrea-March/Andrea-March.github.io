@@ -25,6 +25,7 @@ const CommentSection = ({comments, likes, dislikes, hearts, articleId}) => {
         if(netlifyIdentity.currentUser()){
             sendComment(articleId, comment, netlifyIdentity.currentUser().user_metadata.full_name).catch((err) => {
                 window.location.reload(false);
+                console.log(`${name} ${email} ${website}`)
             }).then(
                 (res) => {
                     window.location.reload(false);
