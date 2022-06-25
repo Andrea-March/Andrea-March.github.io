@@ -1,7 +1,6 @@
 import React from "react";
 import './footer.css'
 import '../../shared/styles/SharedStyles.css'
-import whoweare from "../../static/about.webp";
 import {useNavigate} from "react-router-dom";
 
 const Footer = () =>{
@@ -14,7 +13,7 @@ const Footer = () =>{
                     <p>About</p>
                 </div>
                 <div className="whoarewe-row">
-                    <img src={whoweare} alt=""/>
+                    <img src="https://drive.google.com/uc?id=1UQn-u8TNz20tx3MyYNSSiVHboH67qeku" alt="" loading="lazy"/>
                     <div className="find-out-more dFlex">
                         <p>
                             My name is Andrea, and I'm a coffee lover! I'd like to share my passion with everybody, and I have this blog to talk about my favorite beverage!
@@ -47,8 +46,8 @@ const Footer = () =>{
                 <p>Copyright @2022 For Coffee Lovers</p>
                 <p>All Rights Reserved</p>
                 <div className="social flex-row">
-                    <i className="fa fa-facebook fa-2x"  onClick={()=>{}}/>
-                    <i className="fa fa-instagram fa-2x" onClick={()=>{}}/>
+                    <i className="fa-brands fa-facebook-f fa-2x"  onClick={()=>{}}/>
+                    <i className="fa-brands fa-instagram fa-2x" onClick={()=>{}}/>
                 </div>
             </div>
             <div className="privacy">

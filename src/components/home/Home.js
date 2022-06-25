@@ -1,8 +1,5 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import coffeeflavors from '../../static/coffee-flavors2.webp'
-import coffeecup from '../../static/coffee-cup-ok2.webp'
-import espresso from '../../static/espresso-ok2.webp'
 import './home.css'
 
 const Home = () =>{
@@ -11,9 +8,10 @@ const Home = () =>{
         navigate('/articles');
     }
 
-    const navigateToProducts = () => {
-        navigate('/products');
+    const navigateToProducts = (type) => {
+        navigate(`/products/${type}`);
     }
+
     return (
         <div className="home dFlex" >
             <div className="cover" />
@@ -27,9 +25,17 @@ const Home = () =>{
                 <div className="gallery-title">
                     <p>Choose the best product for you</p>
                 </div>
-                <div className="gallery-element" onClick={navigateToProducts}>
-                    <p>choose the best bean to have your favorite flavor at home, whenever you want</p>
-                    <img src="https://drive.google.com/uc?id=1eBB4svjPXBrM9L86_b0-xmA9rVnd2cf4" loading="lazy" onClick={goToArticles} alt=""/>
+                <div className="gallery-element" onClick={() => navigateToProducts('powders')}>
+                    <p>Choose the best bean to have your favorite flavor at home, whenever you want</p>
+                    <img src="https://drive.google.com/uc?id=1eBB4svjPXBrM9L86_b0-xmA9rVnd2cf4" loading="lazy" alt="coffee beans"/>
+                </div>
+                <div className="gallery-element  right-description" onClick={() => navigateToProducts('machines')}>
+                    <p>Discover new extraction methods to fully enjoy all the nuances of your ground coffee</p>
+                    <img src="https://drive.google.com/uc?id=15aULUvNCUFwXf5kKEmJvDTvTzJeoY1ag" loading="lazy" alt="coffee machine v60"/>
+                </div>
+                <div onClick={() => navigateToProducts('')} className="all-products-link">
+                    All products
+                    <i className="fa-solid fa-arrow-right-long center-arrow"/>
                 </div>
             </div>
 
@@ -39,15 +45,15 @@ const Home = () =>{
                 </div>
                 <div className="gallery-element">
                     <p>Discover the warm taste of a single origin coffee, and let yourself be lulled by its fresh and intense flavors and aromas</p>
-                    <img src={coffeeflavors} loading="lazy" onClick={goToArticles} alt=""/>
+                    <img src="https://drive.google.com/uc?id=yopYpRkEQChKwA4IkpLglh75" loading="lazy" onClick={goToArticles} alt=""/>
                 </div>
                 <div className="gallery-element right-description">
                     <p>Discover the particularities and singular characteristics of coffees from all over the world</p>
-                    <img src={coffeecup} loading="lazy" onClick={goToArticles} alt="https://unsplash.com/photos/nBJHO6wmRWw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
+                    <img src="https://drive.google.com/uc?id=1Hrvgk2raZYq6u2VXqWiAcQhcUeEdkbk4" loading="lazy" onClick={goToArticles} alt="https://unsplash.com/photos/nBJHO6wmRWw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
                 </div>
                 <div className="gallery-element last">
                     <p>Discover the best coffee extraction methods, to fully enjoy your cup and appreciate all the nuances of your coffee</p>
-                    <img src={espresso} loading="lazy" onClick={goToArticles} alt="https://unsplash.com/photos/KixfBEdyp64?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
+                    <img src="https://drive.google.com/uc?id=11YFKtjwdN1mGapbS_2NawwLBhKqDy7Op" loading="lazy" onClick={goToArticles} alt="https://unsplash.com/photos/KixfBEdyp64?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"/>
                 </div>
 
             </div>
